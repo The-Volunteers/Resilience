@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class FirstPersonController : MonoBehaviour
@@ -12,16 +13,31 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float mouseSensitivity = 0.1f;
     [SerializeField] private float upDownLookRange = 80f;
 
-    [Header("Look Parameters")]
+    [Header("Gravity Parameters")]
     [SerializeField] private float gravityMultiplier = 1f;
+    
+    [Header("Interaction Parameters")]
+    [SerializeField] private float interactionDistance = 3f;
+    [SerializeField] private LayerMask interactableLayer;
+    [SerializeField] private float interactionCooldown = 2f;
+    private Transform objectHeld;
+    private bool interactionTimerStart = true;
 
     [Header("References")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private RaycastManager raycastManager;
 
     private Vector3 currentMovement;
     private float verticalRotation;
+
+    private bool isObservingAnItem;
+    public bool IsObservingAnItem
+    {
+        get { return isObservingAnItem; }
+        set {  isObservingAnItem = value; }
+    }
 
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
 
@@ -30,6 +46,7 @@ public class FirstPersonController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        isObservingAnItem = false;
     }
 
     // Update is called once per frame
@@ -37,6 +54,7 @@ public class FirstPersonController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
+        HandleInteraction();      
     }
 
     private Vector3 CalculateWolrdDirection()
@@ -61,8 +79,16 @@ public class FirstPersonController : MonoBehaviour
         float mouseXRotation = playerInputHandler.RotationInput.x * mouseSensitivity;
         float mouseYRotation = playerInputHandler.RotationInput.y * mouseSensitivity;
 
-        ApplyHorizontalRotation(mouseXRotation);
-        ApplyVerticalRotation(mouseYRotation);
+        if (IsObservingAnItem)
+        {
+            ApplyHorizontalRotationToHeldObject(mouseXRotation);
+            ApplyVerticalRotationToHeldObject(mouseYRotation);
+        }
+        else
+        {
+            ApplyHorizontalRotation(mouseXRotation);
+            ApplyVerticalRotation(mouseYRotation);
+        }
     }
 
     private void HandleGravity()
@@ -77,6 +103,43 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    private void HandleInteraction()
+    {
+        InteractionTimerManager();
+
+        if (interactionCooldown > 0f)
+        {
+            return;
+        }
+
+        if (playerInputHandler.InteractionTriggered)
+        {
+            if (IsObservingAnItem)
+            {
+                GameManager.Instance.StopObservingItem.Invoke(objectHeld);
+                GameManager.Instance.IsGamePaused = false;
+                interactionCooldown = 2f;
+                interactionTimerStart = true;
+                return;
+            }
+            Transform transform = raycastManager.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+            if (transform == null) { return; }
+            if (transform.TryGetComponent<Interactable>(out Interactable interactable))
+            {
+                objectHeld = transform;
+                interactable.Interact();
+                interactionCooldown = 2f;
+                interactionTimerStart = true;
+                Debug.Log("Interacting with an object");
+            }
+            else
+            {
+                Debug.Log($"{transform.gameObject.name} is not interactable");
+            }
+            
+        }
+    }
+
     private void ApplyHorizontalRotation(float rotationAmount)
     {
         transform.Rotate(0f, rotationAmount, 0f);
@@ -85,5 +148,28 @@ public class FirstPersonController : MonoBehaviour
     {
         verticalRotation = Mathf.Clamp(verticalRotation - rotationAmount, -upDownLookRange, upDownLookRange);
         mainCamera.transform.localRotation = Quaternion.Euler(verticalRotation, 0f, 0f);
+    }
+
+    private void ApplyHorizontalRotationToHeldObject(float rotationAmount)
+    {
+        objectHeld.RotateAround(objectHeld.position, Vector3.up, rotationAmount);
+    }
+    private void ApplyVerticalRotationToHeldObject(float rotationAmount)
+    {
+        objectHeld.RotateAround(objectHeld.position, Vector3.left, rotationAmount);
+    }
+
+    private void InteractionTimerManager()
+    {
+        if (interactionTimerStart)
+        {
+            interactionCooldown -= Time.unscaledDeltaTime;
+        }
+
+        if(interactionCooldown < 0f)
+        {
+            interactionCooldown = 0f;
+            interactionTimerStart = false;
+        }
     }
 }

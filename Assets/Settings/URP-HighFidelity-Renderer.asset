@@ -16,12 +16,12 @@ MonoBehaviour:
   m_Settings:
     AOMethod: 1
     Downsample: 0
-    AfterOpaque: 0
+    AfterOpaque: 1
     Source: 1
     NormalSamples: 1
     Intensity: 0.5
     DirectLightingStrength: 0.25
-    Radius: 0.25
+    Radius: 0.4
     Samples: 0
     BlurQuality: 0
     Falloff: 100
@@ -113,7 +113,7 @@ MonoBehaviour:
   renderPassEvent: 350
   outlinesLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 193
   outlineSettings:
     outlineColor: {r: 0, g: 0, b: 0, a: 1}
     outlineScale: 1
