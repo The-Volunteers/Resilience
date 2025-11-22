@@ -32,12 +32,14 @@ public class GameManager : MonoBehaviour
 
     [Header("Player References")]
     [SerializeField] private FirstPersonController playerController;
+    [SerializeField] private ObjectPlacer objectPlacer;
     [SerializeField] private Transform playerItemObserverPosition;
     [SerializeField] private Transform playerEquipedItemPosition;
 
     [Header("Unity Events")]
     public UnityEvent<Transform> ObserveItem;
     public UnityEvent<Transform> StopObservingItem;
+    public UnityEvent<Transform> DropItem;
     
 
     private void Awake()
@@ -56,6 +58,7 @@ public class GameManager : MonoBehaviour
     {
         ObserveItem.AddListener(ActivateObserveItemMode);
         StopObservingItem.AddListener(EquipeItem);
+        DropItem.AddListener(DeactivateItemPlacementMode);
     }
 
     // Update is called once per frame
@@ -80,6 +83,17 @@ public class GameManager : MonoBehaviour
         transform.parent = null;
         viewManager.MoveObjectInWorld(transform, playerEquipedItemPosition.position);
         transform.parent = playerEquipedItemPosition;
+        ActivateItemPlacementMode(transform);
+    }
+
+    private void ActivateItemPlacementMode(Transform transform)
+    {
+        objectPlacer.PreviewObject = transform.gameObject;
+        objectPlacer.IsInPlacementMode = true;
+    }
+    private void DeactivateItemPlacementMode(Transform transform)
+    {
+        objectPlacer.IsInPlacementMode = false;
     }
 
     private void PauseGame()

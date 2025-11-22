@@ -27,7 +27,8 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
-    [SerializeField] private RaycastManager raycastManager;
+    //[SerializeField] private RaycastManager raycastManager;
+    //[SerializeField] private ObjectPlacer objectPlacer;
 
     private Vector3 currentMovement;
     private float verticalRotation;
@@ -122,7 +123,7 @@ public class FirstPersonController : MonoBehaviour
                 interactionTimerStart = true;
                 return;
             }
-            Transform transform = raycastManager.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+            Transform transform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
             if (transform == null) { return; }
             if (transform.TryGetComponent<Interactable>(out Interactable interactable))
             {
