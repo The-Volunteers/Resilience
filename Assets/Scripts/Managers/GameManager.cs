@@ -74,6 +74,7 @@ public class GameManager : MonoBehaviour
         transform.parent = null;
         viewManager.MoveObjectInWorld(transform, playerItemObserverPosition.position);
         transform.parent = playerItemObserverPosition;
+        transform.localPosition = Vector3.zero;
     }
 
     private void EquipeItem(Transform transform)
@@ -83,6 +84,7 @@ public class GameManager : MonoBehaviour
         transform.parent = null;
         viewManager.MoveObjectInWorld(transform, playerEquipedItemPosition.position);
         transform.parent = playerEquipedItemPosition;
+        transform.localPosition = Vector3.zero;
         ActivateItemPlacementMode(transform);
     }
 
@@ -93,7 +95,15 @@ public class GameManager : MonoBehaviour
     }
     private void DeactivateItemPlacementMode(Transform transform)
     {
+        transform.parent = null;
+        Transform previewItem = objectPlacer.ExitPlacementMode();
+        viewManager.DropItemToPlacementLocaltion(transform, previewItem);
+        Collider itemCollider = transform.gameObject.GetComponent<Collider>();
+        itemCollider.enabled = true;
+        transform.gameObject.layer = LayerMask.NameToLayer("Interactable");
+        //transform.gameObject.AddComponent<Rigidbody>();
         objectPlacer.IsInPlacementMode = false;
+        Destroy(objectPlacer.PreviewObject);
     }
 
     private void PauseGame()

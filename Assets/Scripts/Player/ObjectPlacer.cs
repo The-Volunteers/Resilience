@@ -58,6 +58,14 @@ public class ObjectPlacer : MonoBehaviour
         Quaternion rotation = Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f);
         PreviewObject = Instantiate(PreviewObject, outOfScenePosition, rotation);
         PreviewObject.layer = LayerMask.NameToLayer("ProjectedItem");
+        Renderer previewobjectRenderer = PreviewObject.GetComponent<Renderer>();
+        Material[] materials = previewobjectRenderer.materials;
+        for(int i = 0; i < materials.Length; i++)
+        {
+            materials[i] = previewItemMaterial;
+        }
+        previewobjectRenderer.materials = materials;
+
         //GameObject pivot = new GameObject("ItemCopy");
         //pivot.transform.rotation = rotation;
         //pivot.transform.position = outOfScenePosition;
@@ -71,9 +79,10 @@ public class ObjectPlacer : MonoBehaviour
         //    child.gameObject.layer = LayerMask.NameToLayer("ProjectedItem");
         //}
     }
-    private void ExitPlacementMode()
+    public Transform ExitPlacementMode()
     {
         Debug.Log("Placement Mode Deactivated !!");
+        return PreviewObject.transform;
     }
 
     private void UpdateCurrentPlacementPosition()

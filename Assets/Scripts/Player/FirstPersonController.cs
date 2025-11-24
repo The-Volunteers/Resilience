@@ -21,6 +21,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private float interactionCooldown = 2f;
     private Transform objectHeld;
+    private Vector3 objectHeldCenter = Vector3.zero;
     private bool interactionTimerStart = true;
 
     [Header("References")]
@@ -123,12 +124,26 @@ public class FirstPersonController : MonoBehaviour
                 interactionTimerStart = true;
                 return;
             }
+
+            if(objectHeld != null)
+            {
+                // object is equipped
+                GameManager.Instance.DropItem.Invoke(objectHeld);
+                interactionCooldown = 2f;
+                interactionTimerStart = true;
+                objectHeld = null;
+                objectHeldCenter = Vector3.zero;
+                return;
+            }
+
             Transform transform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
             if (transform == null) { return; }
             if (transform.TryGetComponent<Interactable>(out Interactable interactable))
             {
+                // objectHeld and objectHeldCenter must be reset when the object is dropped
                 objectHeld = transform;
                 interactable.Interact();
+                objectHeldCenter = GetCenterOfTheObjectHeld(objectHeld);
                 interactionCooldown = 2f;
                 interactionTimerStart = true;
                 Debug.Log("Interacting with an object");
@@ -153,11 +168,13 @@ public class FirstPersonController : MonoBehaviour
 
     private void ApplyHorizontalRotationToHeldObject(float rotationAmount)
     {
-        objectHeld.RotateAround(objectHeld.position, Vector3.up, rotationAmount);
+        //objectHeld.RotateAround(objectHeld.position, Vector3.up, rotationAmount);
+        objectHeld.RotateAround(objectHeldCenter, Vector3.up, rotationAmount);
     }
     private void ApplyVerticalRotationToHeldObject(float rotationAmount)
     {
-        objectHeld.RotateAround(objectHeld.position, Vector3.left, rotationAmount);
+        //objectHeld.RotateAround(objectHeld.position, Vector3.left, rotationAmount);
+        objectHeld.RotateAround(objectHeldCenter, Vector3.left, rotationAmount);
     }
 
     private void InteractionTimerManager()
@@ -171,6 +188,20 @@ public class FirstPersonController : MonoBehaviour
         {
             interactionCooldown = 0f;
             interactionTimerStart = false;
+        }
+    }
+
+    private Vector3 GetCenterOfTheObjectHeld(Transform objectHeld)
+    {
+        if(objectHeld.TryGetComponent<Renderer>(out Renderer renderer))
+        {
+            return renderer.bounds.center;
+        }
+        else
+        {
+            MeshRenderer meshRenderer = transform.gameObject.AddComponent<MeshRenderer>();
+            Debug.LogWarning($"{transform.gameObject.name} doesn't have a renderer so a new one has been added but might not be at the right mesh render or might be empty !");
+            return meshRenderer.bounds.center;
         }
     }
 }

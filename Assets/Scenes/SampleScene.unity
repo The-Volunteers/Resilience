@@ -1080,7 +1080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 037b0c888dc094747b947d8442e59131, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  previewItemMaterial: {fileID: 0}
+  previewItemMaterial: {fileID: 2100000, guid: 781ff47ad11f85e42a2423a9d72dc449, type: 2}
   objectDistanceFromPlayer: 2
   raycastDistance: 5
   raycastStartVerticalOffset: 2
@@ -12170,7 +12170,7 @@ Transform:
   m_GameObject: {fileID: 1990927825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1.5}
+  m_LocalPosition: {x: 0, y: -0.25, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
