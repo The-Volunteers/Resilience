@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}" SchemaVersion="133">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Play_Test_Beep_Short" ID="{B0A6E704-C3AC-4DB8-97E8-161C866DFBFC}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{19E42A53-C350-4FF1-B748-14C091B1CA6D}" ShortID="387321014">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beep_Short" ID="{72EEA38D-E96B-44F0-B0B6-46EB1EB20873}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Test_Beep_Loop" ID="{6584C12E-4801-46B8-A72B-2CB052C29715}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{4E5154CF-DA61-4627-911F-7A7A4A72DC8D}" ShortID="851022266">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beep_Loop" ID="{8FE262E9-5E99-45FB-8395-7BC7BD9ACB21}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Test_Beep_Loop" ID="{96F65004-FE32-4AC2-B93B-1C9DD2C928EC}">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Action Name="" ID="{B771B44D-C2ED-49DC-B565-CDDDA88F3104}" ShortID="405201812">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+								<Property Name="Scope" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Beep_Loop" ID="{8FE262E9-5E99-45FB-8395-7BC7BD9ACB21}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

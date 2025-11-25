@@ -1,0 +1,81 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "909107942",
+    "Type": "User",
+    "GUID": "{31A1C76B-64AF-4E3F-9199-6F117CB9365F}",
+    "Color": "10",
+    "Language": "SFX",
+    "Hash": "{D2A9F8AC-F75D-550B-5402-7E7F39D3D682}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB_All",
+    "ShortName": "SB_All",
+    "Path": "SB_All.bnk",
+    "Media": [
+     {
+      "Id": "110559818",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing.wav",
+      "CachePath": "48/{480E474E-8C5D-7420-C677-D20CC1542476}.wem"
+     },
+     {
+      "Id": "119220263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing.wav",
+      "CachePath": "3A/{3AD6476B-F78D-8149-5CB9-4997FBB4C636}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2850136426",
+      "Name": "Play_Test_Beep_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Test_Beep_Loop",
+      "GUID": "{6584C12E-4801-46B8-A72B-2CB052C29715}",
+      "Color": "10",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "110559818"
+       }
+      ]
+     },
+     {
+      "Id": "2232761158",
+      "Name": "Play_Test_Beep_Short",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Test_Beep_Short",
+      "GUID": "{B0A6E704-C3AC-4DB8-97E8-161C866DFBFC}",
+      "Color": "10",
+      "DurationType": "OneShot",
+      "DurationMin": "0.76856875",
+      "DurationMax": "0.76856875",
+      "MediaRefs": [
+       {
+        "Id": "119220263"
+       }
+      ]
+     },
+     {
+      "Id": "646803528",
+      "Name": "Stop_Test_Beep_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Test_Beep_Loop",
+      "GUID": "{96F65004-FE32-4AC2-B93B-1C9DD2C928EC}",
+      "Color": "10",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AD3DB49A-9F0F-BA92-9C6D-BC05AE5B5F18}"
+ }
+}

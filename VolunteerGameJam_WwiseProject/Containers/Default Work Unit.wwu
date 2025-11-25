@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9EDC1583-754A-427C-A95B-7BABCA303C40}" SchemaVersion="133">
+	<Containers>
+		<WorkUnit Name="Default Work Unit" ID="{9EDC1583-754A-427C-A95B-7BABCA303C40}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="Tests" ID="{9192E3A5-FE5E-442D-9C39-EBA0180ED8B5}" ShortID="476089241">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="10"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="Beep_Short" ID="{72EEA38D-E96B-44F0-B0B6-46EB1EB20873}" ShortID="837577967">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing" ID="{2E96229A-9DB3-4EF0-ABE7-A321D3034EFC}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.0983480848504241"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.646286741234013"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="119220263"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing" ID="{2E96229A-9DB3-4EF0-ABE7-A321D3034EFC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Beep_Loop" ID="{8FE262E9-5E99-45FB-8395-7BC7BD9ACB21}" ShortID="232101992">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-16</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing" ID="{64484B99-7C0C-41C4-BAE6-2F2A315BDD01}">
+									<PropertyList>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="110559818"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="55396-Censor_Beep-Long-For_blocking_a_stream_of_swearing" ID="{64484B99-7C0C-41C4-BAE6-2F2A315BDD01}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Containers>
+</WwiseDocument>

@@ -1,0 +1,29 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "VolunteerGameJam_WwiseProject",
+   "GUID": "{03850AF8-921F-439D-BEDF-8B30A6DF7B72}",
+   "Generator": "2025.1.3.9039"
+  },
+  "CacheRoot": "../.cache",
+  "Platforms": [
+   {
+    "Name": "Windows",
+    "GUID": "{0733131D-80E9-462E-898A-572CD6D8CDFC}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{6DADE2F6-18C4-4B00-B5EC-279EAC3374E3}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{335AB617-63D8-94FE-9169-7624EFCC1C78}"
+ }
+}

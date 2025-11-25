@@ -1,0 +1,9 @@
+Event	ID	Name			Wwise Object Path	Notes
+	646803528	Stop_Test_Beep_Loop			\Default Work Unit\Stop_Test_Beep_Loop	
+	2232761158	Play_Test_Beep_Short			\Default Work Unit\Play_Test_Beep_Short	
+	2850136426	Play_Test_Beep_Loop			\Default Work Unit\Play_Test_Beep_Loop	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	110559818	Beep_Loop	.cache\48\{480E474E-8C5D-7420-C677-D20CC1542476}.wem		\Containers\Default Work Unit\Tests\Beep_Loop		2094320
+	119220263	Beep_Short	.cache\3A\{3AD6476B-F78D-8149-5CB9-4997FBB4C636}.wem		\Containers\Default Work Unit\Tests\Beep_Short		114100
+

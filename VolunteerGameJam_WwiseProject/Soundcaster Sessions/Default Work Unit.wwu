@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{326193BC-4A2E-4574-832F-D4A2D92CBBAB}" SchemaVersion="133">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{326193BC-4A2E-4574-832F-D4A2D92CBBAB}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="SS_Tests" ID="{95B60B88-CA5B-4686-92F3-077D9022A9A5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Play_Test_Beep_Loop" ID="{6584C12E-4801-46B8-A72B-2CB052C29715}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Test_Beep_Short" ID="{B0A6E704-C3AC-4DB8-97E8-161C866DFBFC}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Test_Beep_Loop" ID="{96F65004-FE32-4AC2-B93B-1C9DD2C928EC}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+					</ModuleList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>
