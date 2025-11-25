@@ -125,7 +125,7 @@ public class FirstPersonController : MonoBehaviour
                 return;
             }
 
-            if(objectHeld != null)
+            if (objectHeld != null)
             {
                 // object is equipped
                 GameManager.Instance.DropItem.Invoke(objectHeld);
@@ -152,7 +152,7 @@ public class FirstPersonController : MonoBehaviour
             {
                 Debug.Log($"{transform.gameObject.name} is not interactable");
             }
-            
+
         }
     }
 
