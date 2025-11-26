@@ -52,8 +52,8 @@ public class PortalCamera : MonoBehaviour
 
         centerPoint = mirrorCenter != null ? mirrorCenter.position : Vector3.zero;
 
-        //Vector3 mirroredPosition = CalculateMirroredPosition();
-        //transform.position = mirroredPosition;
+        Vector3 mirroredPosition = CalculateMirroredPosition();
+        transform.position = mirroredPosition;
 
 
 
@@ -72,6 +72,7 @@ public class PortalCamera : MonoBehaviour
             offset.y = -offset.y;
         }
         offset.z = -offset.z;
+        offset.x = -offset.x;
 
         return centerPoint + offset;
     }
@@ -96,11 +97,11 @@ public class PortalCamera : MonoBehaviour
 
         // Refléter la direction de vue par rapport au plan du miroir (axe Y)
         Vector3 mainForward = playerCamera.forward;
-        Vector3 reflectedForward = new Vector3(mainForward.x, mainForward.y, -mainForward.z);
+        Vector3 reflectedForward = new Vector3(-mainForward.x, mainForward.y, -mainForward.z);
 
         // Refléter aussi le up vector pour maintenir l'orientation correcte
         Vector3 mainUp = playerCamera.up;
-        Vector3 reflectedUp = new Vector3(mainUp.x, mainUp.y, -mainUp.z);
+        Vector3 reflectedUp = new Vector3(-mainUp.x, mainUp.y, -mainUp.z);
 
         // Créer la rotation miroir
         Quaternion mirroredRotation = Quaternion.LookRotation(reflectedForward, reflectedUp);
