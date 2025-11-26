@@ -9,6 +9,38 @@
 							<ObjectRef Name="System" ID="{E94B7044-B0A4-41D0-9959-1BF95FF112D8}" WorkUnitID="{BAA5A285-D7C2-438C-8814-5917841146DA}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="M_Player" ID="{2D4A323D-A8F5-44D0-AA53-3BD434BA2D89}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<AuxBus Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</AuxBus>
+						<AuxBus Name="REV_Ourdoor" ID="{D1D4FF70-217E-4123-9F31-76C93B8A15EF}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</AuxBus>
+					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
