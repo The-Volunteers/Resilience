@@ -7,11 +7,27 @@ public class Item : MonoBehaviour, Interactable
 
     [SerializeField] private bool canBeAssembled;
     [SerializeField] private bool canBeObserved = true;
+    [SerializeField] private bool hasTheClueBeenfound = false;
 
     private bool isHeld = false;
     private Collider col;
     public bool CanBeAssembled { get { return canBeAssembled; } }
-    public bool CanBeObserved { get { return canBeObserved; } }
+    public bool CanBeObserved 
+    {
+        get { return canBeObserved; } 
+        set 
+        {
+            canBeObserved = value;
+        }
+    }
+    public bool HasTheClueBeenfound 
+    {
+        get { return hasTheClueBeenfound; } 
+        set
+        {
+            hasTheClueBeenfound = value;
+        }
+    }
     public bool IsHeld
     {
         get { return isHeld; }
@@ -45,12 +61,22 @@ public class Item : MonoBehaviour, Interactable
             LookAt();
             return;
         }
+        else
+        {
+            Equip();
+            return;
+        }
     }
 
     private void LookAt()
     {
         GameManager.Instance.ObserveItem.Invoke(transform);
         GameManager.Instance.IsGamePaused = true;
+    }
+    private void Equip()
+    {
+        GameManager.Instance.StopObservingItem.Invoke(transform);
+        GameManager.Instance.IsGamePaused = false;
     }
 
     private void Dispose()
