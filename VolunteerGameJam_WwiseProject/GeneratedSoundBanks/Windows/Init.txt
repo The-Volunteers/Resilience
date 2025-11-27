@@ -1,5 +1,18 @@
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	351305259	M_Amb			\Default Work Unit\Main Audio Bus\M_Amb	
+	663102514	M_Music			\Default Work Unit\Main Audio Bus\M_Music	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
+	3569195934	M_Player			\Default Work Unit\Main Audio Bus\M_Player	
+	4059747578	M_Env			\Default Work Unit\Main Audio Bus\M_Env	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	377355006	REV_Indoor			\Default Work Unit\Main Audio Bus\REV_Indoor	
+	1857588325	REV_Outdoor			\Default Work Unit\Main Audio Bus\REV_Outdoor	
+
+Effect plug-ins	ID	Name	Type				Notes
+	91621077	Gain (Custom)	Wwise Gain			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	1990128658	Room_Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

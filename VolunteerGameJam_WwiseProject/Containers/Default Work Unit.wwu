@@ -91,7 +91,13 @@
 					<ChildrenList>
 						<Sound Name="Amb_LP_Clock_V01" ID="{4B6CB8FF-45C5-4F26-A242-B3284ACA7F9D}" ShortID="512719472">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>2</Value>
@@ -99,11 +105,17 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -121,7 +133,13 @@
 						</Sound>
 						<Sound Name="Amb_LP_Kitchen_Fridge_V01" ID="{D4E855F8-A6A0-4812-B956-12749FCADD37}" ShortID="1005483479">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-5</Value>
@@ -129,11 +147,17 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -152,6 +176,11 @@
 						<Sound Name="Amb_LP_Outside_V01" ID="{E7D18A70-3C9E-4E16-AA9C-1E53CA8E7F05}" ShortID="59780917">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-6</Value>
@@ -164,6 +193,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -182,6 +214,11 @@
 						<Sound Name="Amb_LP_Room_V01" ID="{9A0B50EA-A1C9-427E-8377-3859251E3604}" ShortID="848724098">
 							<PropertyList>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-4</Value>
@@ -194,6 +231,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -211,7 +251,18 @@
 						</Sound>
 						<Sound Name="Amb_LP_Sink_Open_Slow_V01" ID="{5ECC904F-3769-46D0-AD66-50082E522FE5}" ShortID="517878482">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Inclusion" Type="bool">
+									<ValueList>
+										<Value>False</Value>
+									</ValueList>
+								</Property>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-2</Value>
@@ -219,11 +270,17 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -241,7 +298,13 @@
 						</Sound>
 						<Sound Name="Amb_LP_Sink_Open_V01" ID="{06FCB1B5-E892-4662-B78E-EB60BEAED266}" ShortID="12683825">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-2</Value>
@@ -249,11 +312,17 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -299,6 +368,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-3</Value>
@@ -311,6 +385,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -494,6 +571,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Waterdrop" ID="{40C71D3B-3474-48E4-BC39-0278075D25E2}" ShortID="55613228">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -512,6 +590,11 @@
 									</ModifierList>
 								</Property>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>-10</Value>
@@ -519,11 +602,17 @@
 								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1169,9 +1258,19 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="1"/>
+								<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="0.2"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-5</Value>
+										<Value>-8</Value>
 									</ValueList>
 								</Property>
 							</PropertyList>
@@ -1181,6 +1280,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Player" ID="{2D4A323D-A8F5-44D0-AA53-3BD434BA2D89}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1614,6 +1716,7 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Rnd_Door_Close" ID="{8FAEEC4E-D3D7-46ED-B37D-716E6B07B260}" ShortID="170111162">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1628,13 +1731,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1686,6 +1805,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Door_Closer_Close" ID="{E27F183D-C99E-456B-9DFA-0CD437667AA6}" ShortID="604218909">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1700,13 +1820,24 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1758,6 +1889,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Door_Closet_Open" ID="{93A17274-D7A5-48CE-B538-3451C5B9A55C}" ShortID="800203385">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1772,13 +1904,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1830,6 +1978,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Door_Creak" ID="{9EEA2CA8-5161-4003-B1D6-67811277B109}" ShortID="501023342">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -1844,13 +1993,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -1990,6 +2155,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Door_Open" ID="{13E20383-136E-45C7-9B05-223E628A3343}" ShortID="196420914">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2004,13 +2170,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2098,6 +2280,16 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -2105,6 +2297,9 @@
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2376,6 +2571,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_LightSwitch" ID="{53867F84-A417-4931-8068-C6AE32A20A37}" ShortID="600680710">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2390,13 +2586,24 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2492,6 +2699,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Sink_Close" ID="{5053289D-E959-4B98-A438-01A4023D0FB2}" ShortID="701118843">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2506,13 +2714,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2564,6 +2788,7 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Rnd_Sink_Open" ID="{E4B81C82-D654-4BA3-9670-927114182BB3}" ShortID="395535755">
 							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
 								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
@@ -2578,13 +2803,29 @@
 										</ModifierInfo>
 									</ModifierList>
 								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-2</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
+								<Reference Name="Attenuation">
+									<ObjectRef Name="Gen_250" ID="{975321BB-6FB6-4F2E-9645-4BC783F526F5}" WorkUnitID="{DBA9414D-B7C4-4339-9D7D-52E0903D2F3B}"/>
+								</Reference>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
 								</Reference>
 								<Reference Name="OutputBus">
 									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
@@ -2656,6 +2897,524 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Rnd_Cardboard01" ID="{DF8A0211-EED8-42FD-8EF2-587DD57D2487}" ShortID="479567279">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{196895CC-D423-426B-A444-137382091D87}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Env_OS_FallInCardboard_A01_V01" ID="{43518678-77D4-491F-8C41-156C99F8C48C}" ShortID="1030974755">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A01_V01" ID="{82EAD026-43EB-458F-A9B7-41DAC8D22044}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A01_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="970775052"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A01_V01" ID="{82EAD026-43EB-458F-A9B7-41DAC8D22044}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_A02_V01" ID="{AEFE67E8-A81E-4D46-89AE-C64888F4A48C}" ShortID="237532489">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A02_V01" ID="{1A6A63DB-4D15-41AF-9F55-2C7830A31D8E}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A02_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="138624712"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A02_V01" ID="{1A6A63DB-4D15-41AF-9F55-2C7830A31D8E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_A03_V01" ID="{71C87092-F514-43C1-B3E1-893C9A8B76FB}" ShortID="233725807">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A03_V01" ID="{B1793AED-2201-4536-8C07-7471EE919401}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A03_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="556760867"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A03_V01" ID="{B1793AED-2201-4536-8C07-7471EE919401}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_A04_V01" ID="{5442148B-42DE-4ACC-9C46-6E24983BF596}" ShortID="203000290">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A04_V01" ID="{8FC6F52C-57C8-4C98-93ED-BF5FD4F8AB68}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A04_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="386102192"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A04_V01" ID="{8FC6F52C-57C8-4C98-93ED-BF5FD4F8AB68}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_A05_V01" ID="{2DAE3072-9F37-476A-86E4-50BBAF286E63}" ShortID="394925705">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A05_V01" ID="{513B3546-9D0B-467E-882A-59126F86E190}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A05_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="510082850"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A05_V01" ID="{513B3546-9D0B-467E-882A-59126F86E190}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_A06_V01" ID="{EDC80AEF-3015-42E1-817A-AA3C826FC6D3}" ShortID="735369016">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_A06_V01" ID="{3AC69DA1-B138-4E3F-96A0-9DF6D5EDDEF0}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_A06_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="39771751"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_A06_V01" ID="{3AC69DA1-B138-4E3F-96A0-9DF6D5EDDEF0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<RandomSequenceContainer Name="Rnd_Cardboard02" ID="{0CAF2101-6588-4CAC-8974-84AFDEC4C96D}" ShortID="403109558">
+							<PropertyList>
+								<Property Name="NormalOrShuffle" Type="int16" Value="0"/>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{932B562F-B0E8-4769-8C17-679101BDB9A3}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="100"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UserAuxSendVolume0" Type="Real64">
+									<ValueList>
+										<Value>-9</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-5</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+								<Reference Name="UserAuxSend0">
+									<ObjectRef Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="Env_OS_FallInCardboard_B03_V01" ID="{365475C3-05C1-4D2A-845B-BAC3E34DDF22}" ShortID="149885236">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B03_V01" ID="{D0A8714A-EEAE-4DEF-BA4D-89D907E261D9}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B03_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="363840240"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B03_V01" ID="{D0A8714A-EEAE-4DEF-BA4D-89D907E261D9}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B04_V01" ID="{5E8ABDFF-BE93-4211-AF59-0B2597E3F5DC}" ShortID="1054853140">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B04_V01" ID="{6DEB0AF7-C873-4584-84D9-E051F2D08534}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B04_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="18361406"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B04_V01" ID="{6DEB0AF7-C873-4584-84D9-E051F2D08534}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B05_V01" ID="{CB22B222-6E85-4F22-AB05-5C8F6136EDD7}" ShortID="227670919">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B05_V01" ID="{C9ACD20E-2901-4515-B8AB-AA6F1EF08118}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B05_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="170625636"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B05_V01" ID="{C9ACD20E-2901-4515-B8AB-AA6F1EF08118}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B06_V01" ID="{39F8D4D7-F0F0-4726-8748-F626CA4221D7}" ShortID="778808241">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B06_V01" ID="{EE23ECFF-4C24-43B9-B373-782219126D3E}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B06_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="691521752"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B06_V01" ID="{EE23ECFF-4C24-43B9-B373-782219126D3E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B07_V01" ID="{C2B9E709-08AD-457D-84F6-D8EA24213498}" ShortID="137342383">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B07_V01" ID="{91D0A76A-525D-42A7-BC44-94E2DE68C404}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B07_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="868534807"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B07_V01" ID="{91D0A76A-525D-42A7-BC44-94E2DE68C404}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B08_V01" ID="{EF7F9BCD-3C8B-4588-8699-84A678B9A7EB}" ShortID="543092365">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B08_V01" ID="{C4667B07-F348-4BEA-B13D-066090F833A0}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B08_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="410887656"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B08_V01" ID="{C4667B07-F348-4BEA-B13D-066090F833A0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B09_V01" ID="{4B0F5668-0BAB-4E64-B378-B3564261908A}" ShortID="630324269">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B09_V01" ID="{D22DEBEC-8774-4ED4-86BA-124DE296004C}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B09_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="912445624"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B09_V01" ID="{D22DEBEC-8774-4ED4-86BA-124DE296004C}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B10_V01" ID="{15EA8B34-9CB1-4E40-BBA2-1AE161017230}" ShortID="1059139058">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B10_V01" ID="{066FA38E-E0A0-4FDE-9A48-C36EB077CF00}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B10_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="611160066"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B10_V01" ID="{066FA38E-E0A0-4FDE-9A48-C36EB077CF00}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="Env_OS_FallInCardboard_B11_V01" ID="{24FF56A9-C878-4519-8196-F4BFA15A461A}" ShortID="147660575">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Main Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="Env_OS_FallInCardboard_B11_V01" ID="{0FE2F451-16F6-4AF8-91F2-70D698DCDBB8}">
+											<Language>SFX</Language>
+											<AudioFile>Env_OS_FallInCardboard_B11_V01.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="34740182"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="Env_OS_FallInCardboard_B11_V01" ID="{0FE2F451-16F6-4AF8-91F2-70D698DCDBB8}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{2FE65621-6B6B-4349-B1A9-2655EFEAA579}" ShortID="969391929">
+					<PropertyList>
+						<Property Name="Color" Type="int16" Value="11"/>
+						<Property Name="OverrideColor" Type="bool" Value="True"/>
+					</PropertyList>
+					<ChildrenList>
+						<Sound Name="VolunteerGameJam_Intro_V01_Cm" ID="{580AD0A3-7F21-4663-96BD-957433CDCB52}" ShortID="1022185059">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="M_Music" ID="{3EFDDA2A-E794-419E-8A7C-ADE69B6C2DA4}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VolunteerGameJam_Intro_V01_Cm" ID="{3AFC8358-C642-4FF8-8D53-ACC370671FA5}">
+									<Language>SFX</Language>
+									<AudioFile>VolunteerGameJam_Intro_V01_Cm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="211473751"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VolunteerGameJam_Intro_V01_Cm" ID="{3AFC8358-C642-4FF8-8D53-ACC370671FA5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" ShortID="160645662">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="M_Music" ID="{3EFDDA2A-E794-419E-8A7C-ADE69B6C2DA4}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{F9E01B95-0F46-424F-89A8-D132A2617A65}">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="4.57700422840005"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VolunteerGameJam_MainMenu_V01_Cm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1034616812"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{F9E01B95-0F46-424F-89A8-D132A2617A65}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="VolunteerGameJam_SeaDiscover_V02_Cm" ID="{3E7B851B-76C7-4C43-BA13-464ED884258F}" ShortID="531900858">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-1</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{71B5A12E-5715-492F-B0ED-EF4F1EAD97DF}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="M_Music" ID="{3EFDDA2A-E794-419E-8A7C-ADE69B6C2DA4}" WorkUnitID="{12E2945F-4106-41D1-B5ED-0E056C565FB2}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="VolunteerGameJam_SeaDiscover_V02_Cm" ID="{BFD01DB2-09EB-4C2E-85A4-2F8AB42567F1}">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.140341186523438"/>
+										<Property Name="LoopBegin" Type="Real64" Value="0"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>VolunteerGameJam_SeaDiscover_V02_Cm.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="436563272"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="VolunteerGameJam_SeaDiscover_V02_Cm" ID="{BFD01DB2-09EB-4C2E-85A4-2F8AB42567F1}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 			</ChildrenList>

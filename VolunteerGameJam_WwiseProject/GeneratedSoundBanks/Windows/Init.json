@@ -10,11 +10,39 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{CDE9AC3D-2B42-1217-02C1-D64576EB9AF6}",
+    "Hash": "{5C509C42-7FAB-9D96-9FE5-7BDD1183327E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "91621077",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{5115278A-5C4E-4C45-93E9-9202BE88D5E6}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
+      },
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -36,14 +64,77 @@
     },
     "Busses": [
      {
+      "Id": "351305259",
+      "Name": "M_Amb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\M_Amb",
+      "GUID": "{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}",
+      "Color": "4"
+     },
+     {
+      "Id": "663102514",
+      "Name": "M_Music",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\M_Music",
+      "GUID": "{3EFDDA2A-E794-419E-8A7C-ADE69B6C2DA4}",
+      "Color": "11"
+     },
+     {
       "Id": "2246998526",
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "91621077"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3569195934",
+      "Name": "M_Player",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\M_Player",
+      "GUID": "{2D4A323D-A8F5-44D0-AA53-3BD434BA2D89}",
+      "Color": "1"
+     },
+     {
+      "Id": "4059747578",
+      "Name": "M_Env",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\M_Env",
+      "GUID": "{D090214B-59DB-4914-91FB-97AA7DAF17EE}",
+      "Color": "8"
+     }
+    ],
+    "AuxBusses": [
+     {
+      "Id": "377355006",
+      "Name": "REV_Indoor",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\REV_Indoor",
+      "GUID": "{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}",
+      "Color": "13",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1857588325",
+      "Name": "REV_Outdoor",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\REV_Outdoor",
+      "GUID": "{D1D4FF70-217E-4123-9F31-76C93B8A15EF}",
+      "Color": "13"
      }
     ]
    }
   ],
-  "FileHash": "{CA0DCF1D-4584-0222-FCFE-945A16C22266}"
+  "FileHash": "{12FC73DA-674E-25FE-1083-402A6FAA88B4}"
  }
 }
