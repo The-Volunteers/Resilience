@@ -171,7 +171,11 @@ public class FirstPersonController : MonoBehaviour
     private void DropItem()
     {
         // object is dropped
-        GameManager.Instance.DropItem.Invoke(objectHeld);
+        GameManager.Instance.DropItem.Invoke(objectHeld);       
+    }
+
+    public void ResetInteractedObjectsValues()
+    {
         interactionCooldown = 1f;
         interactionTimerStart = true;
         objectHeld = null;

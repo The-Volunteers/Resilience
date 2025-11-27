@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
     }
     private void DeactivateItemPlacementMode(Transform transform)
     {
+        if (!objectPlacer.ValidDropState) { return; }
+
         transform.parent = null;
         Transform previewItem = objectPlacer.ExitPlacementMode();
         viewManager.DropItemToPlacementLocaltion(transform, previewItem);
@@ -104,6 +106,7 @@ public class GameManager : MonoBehaviour
         //transform.gameObject.AddComponent<Rigidbody>();
         objectPlacer.IsInPlacementMode = false;
         Destroy(objectPlacer.PreviewObject);
+        playerController.ResetInteractedObjectsValues();
     }
 
     private void PauseGame()
