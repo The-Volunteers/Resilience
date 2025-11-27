@@ -35,11 +35,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ObjectPlacer objectPlacer;
     [SerializeField] private Transform playerItemObserverPosition;
     [SerializeField] private Transform playerEquipedItemPosition;
+    [SerializeField] private Entity entity;
 
     [Header("Unity Events")]
     public UnityEvent<Transform> ObserveItem;
     public UnityEvent<Transform> StopObservingItem;
     public UnityEvent<Transform> DropItem;
+    public UnityEvent<string> NpcInteraction;
     
 
     private void Awake()
@@ -86,6 +88,9 @@ public class GameManager : MonoBehaviour
         transform.parent = playerEquipedItemPosition;
         transform.localPosition = Vector3.zero;
         ActivateItemPlacementMode(transform);
+        
+        // Timer peut être ajouter une coroutine...
+        entity.SendRemarkWhenHoldingObject();
     }
 
     private void ActivateItemPlacementMode(Transform transform)
@@ -107,6 +112,11 @@ public class GameManager : MonoBehaviour
         objectPlacer.IsInPlacementMode = false;
         Destroy(objectPlacer.PreviewObject);
         playerController.ResetInteractedObjectsValues();
+
+        // Advance Story...
+        entity.AdvanceStoryEntity();
+        // make an effect...
+        viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation.position);
     }
 
     private void PauseGame()

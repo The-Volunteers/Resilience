@@ -462,6 +462,7 @@ GameObject:
   - component: {fileID: 199067949}
   - component: {fileID: 199067948}
   - component: {fileID: 199067947}
+  - component: {fileID: 199067951}
   m_Layer: 0
   m_Name: PreviewItemObstacle
   m_TagString: Untagged
@@ -555,6 +556,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &199067951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199067946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ba4aced41f851e449a4eba089494315, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityStoryLocations:
+  - index: 0
+    dialogue: 
+    entityLocation: {fileID: 0}
+    entityAnimation: {fileID: 0}
+  remarkWhenHoldingAnObject:
+  - Store It if you want to keep It or throw It in the box
+  - Will you keep It or throw It away ?
+  - The choice is yours... Keep It or may It be forevver forgotten
+  - ... Is It important ?
 --- !u!4 &202239211 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ae22512c21a4ea447aad022ccd48a6e4,
@@ -2626,6 +2649,7 @@ MonoBehaviour:
   objectPlacer: {fileID: 666929610}
   playerItemObserverPosition: {fileID: 1990927826}
   playerEquipedItemPosition: {fileID: 1028585497}
+  entity: {fileID: 0}
   ObserveItem:
     m_PersistentCalls:
       m_Calls: []
@@ -2633,6 +2657,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   DropItem:
+    m_PersistentCalls:
+      m_Calls: []
+  NpcInteraction:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &1009442865

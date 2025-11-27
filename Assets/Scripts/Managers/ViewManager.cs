@@ -21,6 +21,11 @@ public class ViewManager : MonoBehaviour
         objectToMove.position = endPosition;
         objectToMove.localRotation = Quaternion.identity;
     }
+    public void MoveObjectInWorld(Transform objectToMove, Transform endPosition)
+    {
+        objectToMove.position = endPosition.position;
+        objectToMove.localRotation = endPosition.localRotation;
+    }
 
     public void DropItemToPlacementLocaltion(Transform ItemToMove, Transform placementLocation)
     {
