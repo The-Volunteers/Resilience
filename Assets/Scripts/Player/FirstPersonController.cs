@@ -115,6 +115,8 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleInteraction()
     {
+        CheckInteractableObjects();
+
         InteractionTimerManager();
 
         if (interactionCooldown > 0f)
@@ -132,6 +134,12 @@ public class FirstPersonController : MonoBehaviour
 
             if (objectHeld != null)
             {
+                Transform depositBoxtransform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+                if(depositBoxtransform != null && depositBoxtransform.CompareTag("DepositBox"))
+                {
+                    CheckIfDepositBox(depositBoxtransform, objectHeld);
+                    return;
+                }
                 DropItem();
                 return;
             }
@@ -139,7 +147,8 @@ public class FirstPersonController : MonoBehaviour
             Transform transform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
             if (transform == null) { return; }
             if (transform.TryGetComponent<Interactable>(out Interactable interactable))
-            {                
+            {
+                //CheckIfDepositBox(transform); // NEED TO BE IN OBJECT PLACER !!!
                 interactable.Interact();               
             }
             else
@@ -156,6 +165,29 @@ public class FirstPersonController : MonoBehaviour
                 Debug.Log($"{transform.gameObject.name} is not an object");
             }
 
+        }
+    }
+
+    private void CheckInteractableObjects()
+    {
+        if(isObservingAnItem) { return; }
+        Transform transform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+        if (transform == null) { return; }
+        if (transform.CompareTag("Entity")) { return; }
+        //Item item = transform.GetComponent<Item>();
+        //if (item == null) { return; }
+        if(GameManager.Instance.littleShake == null) { return; }
+        //if (item.IsShakeEffectIsPlaying) {  return; }
+        if (GameManager.Instance.ItemEffectisPlaying) {  return; }
+        GameManager.Instance.littleShake(transform, 0.1f, 1f, 10, 90, true); //item.IsShakeEffectIsPlaying
+    }
+
+    private void CheckIfDepositBox(Transform binTransform, Transform objectHeld)
+    {
+        if (binTransform.TryGetComponent<DepositBox>(out DepositBox bin))
+        {
+            bin.itemTransform = objectHeld;
+            bin.Interact();
         }
     }
 

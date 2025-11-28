@@ -12,7 +12,7 @@ public class ObjectPlacer : MonoBehaviour
         {
             isInPlacementMode = value;
             if (isInPlacementMode)
-            {
+            {               
                 EnterPlacementMode();
             }
             else
@@ -30,7 +30,7 @@ public class ObjectPlacer : MonoBehaviour
     [SerializeField] private float objectDistanceFromPlayer = 5f;
     [SerializeField] private Color validColor;
     [SerializeField] private Color invalidColor;
-    private Vector3 currentPacementPosition = Vector3.zero;
+    private Vector3 currentPlacementPosition = Vector3.zero;
     private Vector3 outOfScenePosition = new Vector3(0f, -100f, 0f);
     private PreviewObjectValidChecker previewObjectValidChecker;
 
@@ -51,7 +51,7 @@ public class ObjectPlacer : MonoBehaviour
     void Update()
     {
         if (isInPlacementMode)
-        {
+        {           
             UpdateCurrentPlacementPosition();
 
             if (previewObjectValidChecker.IsValid)
@@ -89,32 +89,27 @@ public class ObjectPlacer : MonoBehaviour
 
         previewObjectValidChecker = PreviewObject.AddComponent<PreviewObjectValidChecker>();
         previewObjectValidChecker.SetCollisionLayers("Default", "Water", "Item", "Interactable");
-
-        //GameObject pivot = new GameObject("ItemCopy");
-        //pivot.transform.rotation = rotation;
-        //pivot.transform.position = outOfScenePosition;
-        //GameObject projectedObject = Instantiate(PreviewObject, Vector3.zero, PreviewObject.transform.rotation = Quaternion.identity);
-        //projectedObject.transform.position = new Vector3(0f, -100f, 0f);
-        //projectedObject.transform.parent = pivot.transform;
-        //projectedObjectCopy = pivot;
-        //projectedObjectCopy.layer = LayerMask.NameToLayer("ProjectedItem");
-        //foreach (Transform child in projectedObjectCopy.transform)
-        //{
-        //    child.gameObject.layer = LayerMask.NameToLayer("ProjectedItem");
-        //}
+        //previewObjectValidChecker.IsValid = true;
     }
     public Transform ExitPlacementMode()
     {
         Debug.Log("Placement Mode Deactivated !!");
+        ValidDropState = false;
         return PreviewObject.transform;
     }
 
     private void UpdateCurrentPlacementPosition()
     {
-        currentPacementPosition = RaycastManager.Instance.FindPreviewItemCurrentPosition(raycastDistance, raycastStartVerticalOffset, objectDistanceFromPlayer, itemSurfacePlacerLayer);
+        currentPlacementPosition = RaycastManager.Instance.FindPreviewItemCurrentPosition(raycastDistance, raycastStartVerticalOffset, objectDistanceFromPlayer, itemSurfacePlacerLayer);
         Quaternion rotation = Quaternion.Euler(0f, Camera.main.transform.eulerAngles.y, 0f);
-        PreviewObject.transform.position = currentPacementPosition;
+        PreviewObject.transform.position = currentPlacementPosition;
         PreviewObject.transform.rotation = rotation;
+
+        if(PreviewObject.transform.position == Vector3.zero)
+        {
+            ValidDropState = false;
+        }
+
         //projectedObjectCopy.transform.position = currentPacementPosition;
         //projectedObjectCopy.transform.rotation = rotation;
     }
@@ -122,17 +117,14 @@ public class ObjectPlacer : MonoBehaviour
     private void SetValidPreviewState()
     {
         previewItemMaterial.color = validColor;
-        ValidDropState = true;
+        if(PreviewObject.transform.position != Vector3.zero && PreviewObject != null)
+        {
+            ValidDropState = true;
+        }
     }
     private void SetInvalidPreviewState()
     {
         previewItemMaterial.color = invalidColor;
         ValidDropState = false;
-    }
-
-    //private bool CanPlaceObject()
-    //{
-    //    if(PreviewObject == null) { return false; }
-    //    return PreviewObject.GetComponent<PreviewObjectValidChecker>().IsValid;
-    //}
+    }    
 }

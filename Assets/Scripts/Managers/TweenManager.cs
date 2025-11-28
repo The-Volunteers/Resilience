@@ -5,15 +5,26 @@ using UnityEngine;
 
 public class TweenManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        GameManager.Instance.littleShake = LittleShakeEffect;
     }
-
-    // Update is called once per frame
-    void Update()
+    public void LittleShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut) //Item bool isEffectPlaying
     {
+        //isEffectPlaying = true;
+        GameManager.Instance.ItemEffectisPlaying = true;
+
+        Vector3 originalScale = transform.localScale;
+
+        var sequence = DOTween.Sequence();
+        sequence.Append(transform.DOShakeScale(duration, new Vector3(0f, strenght, 0f), vibrato, randomness, fadeOut)); //.SetEase(Ease.OutBack);
+        sequence.Append(transform.DOScale(originalScale, 0.2f).SetEase(Ease.Linear));
+        sequence.AppendInterval(5f);
+        sequence.OnComplete(() => {
+            //isEffectPlaying = false;
+            GameManager.Instance.ItemEffectisPlaying = false;    
+            return;
+        });
         
     }
 }

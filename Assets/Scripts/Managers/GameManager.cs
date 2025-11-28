@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+
+    public bool ItemEffectisPlaying {  get; set; } = false;
     
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
@@ -41,8 +43,11 @@ public class GameManager : MonoBehaviour
     public UnityEvent<Transform> ObserveItem;
     public UnityEvent<Transform> StopObservingItem;
     public UnityEvent<Transform> DropItem;
+    public UnityEvent<Transform> ThrowAwayItem;
     public UnityEvent<string> NpcInteraction;
-    
+
+    public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
+    public ShakeEffect littleShake;
 
     private void Awake()
     {
@@ -61,6 +66,7 @@ public class GameManager : MonoBehaviour
         ObserveItem.AddListener(ActivateObserveItemMode);
         StopObservingItem.AddListener(EquipeItem);
         DropItem.AddListener(DeactivateItemPlacementMode);
+        ThrowAwayItem.AddListener(DestroyItem);
     }
 
     // Update is called once per frame
@@ -115,8 +121,19 @@ public class GameManager : MonoBehaviour
 
         // Advance Story...
         entity.AdvanceStoryEntity();
-        // make an effect...
-        viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation.position);
+        // make a visual effect...
+        //viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation.position);
+    }
+
+    private void DestroyItem(Transform transform)
+    {
+        Destroy(transform.gameObject);
+        objectPlacer.IsInPlacementMode = false;
+        Destroy(objectPlacer.PreviewObject);
+        playerController.ResetInteractedObjectsValues();
+        // Advance Story...
+        entity.AdvanceStoryEntity();
+        // make a visual effect...
     }
 
     private void PauseGame()
@@ -127,4 +144,5 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 1f;
     }
+
 }

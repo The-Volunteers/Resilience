@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PreviewObjectValidChecker : MonoBehaviour
 {
-    public bool IsValid { get; private set; } = true;
+    public bool IsValid { get; set; } = true;
     private LayerMask collisionLayers;
 
     public void SetCollisionLayers(params string[] layerNames)
