@@ -118,9 +118,15 @@ public class GameManager : MonoBehaviour
         objectPlacer.IsInPlacementMode = false;
         Destroy(objectPlacer.PreviewObject);
         playerController.ResetInteractedObjectsValues();
-
+       
         // Advance Story...
-        entity.AdvanceStoryEntity();
+        if(transform.TryGetComponent<Item>(out Item item))
+        {
+            if (item.HasTheClueBeenfound)
+            {
+                entity.AdvanceStoryEntity();
+            }
+        }
         // make a visual effect...
         //viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation.position);
     }
@@ -132,7 +138,13 @@ public class GameManager : MonoBehaviour
         Destroy(objectPlacer.PreviewObject);
         playerController.ResetInteractedObjectsValues();
         // Advance Story...
-        entity.AdvanceStoryEntity();
+        if (transform.TryGetComponent<Item>(out Item item))
+        {
+            if (item.HasTheClueBeenfound)
+            {
+                entity.AdvanceStoryEntity();
+            }
+        }
         // make a visual effect...
     }
 

@@ -8,7 +8,7 @@ public struct EntityStoryAdvancement
     public int index;
     public string dialogue;
     public Transform entityLocation;
-    public Animation entityAnimation;
+    //public Animation entityAnimation;
 }
 [System.Serializable]
 public class Entity : MonoBehaviour, Interactable
