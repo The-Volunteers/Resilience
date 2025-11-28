@@ -44,6 +44,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent<Transform> StopObservingItem;
     public UnityEvent<Transform> DropItem;
     public UnityEvent<Transform> ThrowAwayItem;
+    public UnityEvent<Transform> ForceAdvanceStory;
     public UnityEvent<string> NpcInteraction;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
@@ -67,6 +68,7 @@ public class GameManager : MonoBehaviour
         StopObservingItem.AddListener(EquipeItem);
         DropItem.AddListener(DeactivateItemPlacementMode);
         ThrowAwayItem.AddListener(DestroyItem);
+        ForceAdvanceStory.AddListener(Advance);
     }
 
     // Update is called once per frame
@@ -125,6 +127,7 @@ public class GameManager : MonoBehaviour
             if (item.HasTheClueBeenfound)
             {
                 entity.AdvanceStoryEntity();
+                viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
             }
         }
         // make a visual effect...
@@ -143,9 +146,18 @@ public class GameManager : MonoBehaviour
             if (item.HasTheClueBeenfound)
             {
                 entity.AdvanceStoryEntity();
+                viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
             }
         }
         // make a visual effect...
+    }
+
+    private void Advance(Transform transform)
+    {
+        
+        entity.AdvanceStoryEntity();
+        viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+            
     }
 
     private void PauseGame()

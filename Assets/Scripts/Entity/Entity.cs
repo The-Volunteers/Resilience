@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.EventSystems.EventTrigger;
 
 [System.Serializable]
 public struct EntityStoryAdvancement
@@ -19,17 +20,23 @@ public class Entity : MonoBehaviour, Interactable
     public EntityStoryAdvancement actualEntityStoryLocation { get; private set; }
     private bool firstTimeHoldingAnObject = true;
     private int storyIndex = 0;
+    private bool first = true;
 
 
     public void Interact()
     {
+        if (first)
+        {
+            GameManager.Instance.ForceAdvanceStory.Invoke(transform);
+            first = false;
+        }
         GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        actualEntityStoryLocation = entityStoryLocations[0];
     }
 
     // Update is called once per frame
@@ -40,11 +47,11 @@ public class Entity : MonoBehaviour, Interactable
 
     public void AdvanceStoryEntity()
     {
-        actualEntityStoryLocation = entityStoryLocations[storyIndex];
         if(storyIndex < entityStoryLocations.Count -1)
         {
             storyIndex++;
         }
+        actualEntityStoryLocation = entityStoryLocations[storyIndex];
     }
 
     public void SendRemarkWhenHoldingObject()
