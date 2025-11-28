@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5C509C42-7FAB-9D96-9FE5-7BDD1183327E}",
+    "Hash": "{37575DA8-6AD6-9831-4FD7-FB4CC622585B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -132,9 +132,17 @@
       "GUID": "{D1D4FF70-217E-4123-9F31-76C93B8A15EF}",
       "Color": "13"
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3993436217",
+      "Name": "GP_SC_Mus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_SC_Mus",
+      "GUID": "{F7BC2E00-9715-4D27-940D-1770B2F0DA45}"
+     }
     ]
    }
   ],
-  "FileHash": "{12FC73DA-674E-25FE-1083-402A6FAA88B4}"
+  "FileHash": "{7CA62182-3B4C-B759-2AB9-A8A9B84A9343}"
  }
 }

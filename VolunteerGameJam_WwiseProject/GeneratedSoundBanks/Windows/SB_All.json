@@ -11,7 +11,7 @@
     "GUID": "{31A1C76B-64AF-4E3F-9199-6F117CB9365F}",
     "Color": "10",
     "Language": "SFX",
-    "Hash": "{5E7471BE-B3EB-F23D-8F4D-09B114E93B4E}",
+    "Hash": "{7EB76499-98C6-FCCB-3E09-FF5ECA449616}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SB_All",
     "ShortName": "SB_All",
     "Path": "SB_All.bnk",
@@ -71,6 +71,14 @@
       "Location": "Memory",
       "ShortName": "Env_OS_LightSwitch04_V01.wav",
       "CachePath": "4E/{4E984423-C8AA-EF20-8F5D-EBD900712264}.wem"
+     },
+     {
+      "Id": "53887119",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Env_OS_Trash_Open02_V01.wav",
+      "CachePath": "9B/{9B515DF1-E710-E606-C7B1-FCB905F81C2E}.wem"
      },
      {
       "Id": "73334924",
@@ -305,6 +313,14 @@
       "CachePath": "F0/{F005DC22-2CF3-491A-D66A-C3FE84401A73}.wem"
      },
      {
+      "Id": "308739404",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Env_OS_Trash_Open01_V01.wav",
+      "CachePath": "9A/{9A2CA68A-D9C7-2CD2-65D3-555EBC88D1F1}.wem"
+     },
+     {
       "Id": "319489387",
       "Language": "SFX",
       "Streaming": "false",
@@ -406,7 +422,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "VolunteerGameJam_SeaDiscover_V02_Cm.wav",
-      "CachePath": "78/{78FD76C0-0CCE-CFCB-119B-C8ED5EC5AA84}.wem"
+      "CachePath": "57/{5753138D-5F54-AE21-9CD7-EC43DE78456F}.wem"
      },
      {
       "Id": "436573777",
@@ -761,6 +777,14 @@
       "CachePath": "B8/{B89FACB4-0F6A-4F16-2BD2-649BD931D26E}.wem"
      },
      {
+      "Id": "885289485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Env_OS_Trash_Close01_V01.wav",
+      "CachePath": "3F/{3FA77742-67F4-CE0E-7D2F-D7B84F711506}.wem"
+     },
+     {
       "Id": "891441437",
       "Language": "SFX",
       "Streaming": "false",
@@ -831,6 +855,14 @@
       "Location": "Memory",
       "ShortName": "Amb_OS_Outside_Waves07_V01.wav",
       "CachePath": "C6/{C6F101DC-313B-8F89-CA17-9685B8DBBB38}.wem"
+     },
+     {
+      "Id": "949993519",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Env_OS_Trash_Close02_V01.wav",
+      "CachePath": "08/{08D64292-D72F-652D-8491-97D29F362953}.wem"
      },
      {
       "Id": "966656206",
@@ -913,6 +945,14 @@
       "CachePath": "D2/{D217181D-F49A-574F-1A7D-FD9D049ADAE0}.wem"
      },
      {
+      "Id": "1050613822",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Env_OS_Trash_Open03_V01.wav",
+      "CachePath": "91/{91883785-D75A-B570-5E0B-41C033210523}.wem"
+     },
+     {
       "Id": "1051112153",
       "Language": "SFX",
       "Streaming": "false",
@@ -937,6 +977,14 @@
       "CachePath": "D8/{D83643CE-5645-95F4-E09F-EEAF5540C40F}.wem"
      },
      {
+      "Id": "1068209839",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "NPC_OS_EntityPresence_V01.wav",
+      "CachePath": "A3/{A3CFF4D0-2215-AA96-ABFA-7726FCDB2D4A}.wem"
+     },
+     {
       "Id": "1068766287",
       "Language": "SFX",
       "Streaming": "false",
@@ -945,6 +993,18 @@
       "CachePath": "8D/{8DDCBBBB-FEC2-C9B2-B334-0FC9E7949AA9}.wem"
      }
     ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "3864769809",
+       "Name": "Meter_SeaMusic",
+       "ObjectPath": "\\Effects\\Default Work Unit\\Meter_SeaMusic",
+       "GUID": "{61302029-DBE4-4A55-AA6E-168EE8A61770}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2304778352",
@@ -1237,6 +1297,31 @@
       ]
      },
      {
+      "Id": "2130530439",
+      "Name": "Play_Entity",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Entity",
+      "GUID": "{9FA00341-5F56-4F0F-8D59-1EDE2D75B208}",
+      "Color": "18",
+      "MaxAttenuation": "500",
+      "DurationType": "OneShot",
+      "DurationMin": "4.9221544",
+      "DurationMax": "4.9221544",
+      "MediaRefs": [
+       {
+        "Id": "1068209839"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "377355006",
+        "Name": "REV_Indoor",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\REV_Indoor",
+        "GUID": "{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}",
+        "Color": "13"
+       }
+      ]
+     },
+     {
       "Id": "2316918641",
       "Name": "Play_Fridge",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Fridge",
@@ -1353,7 +1438,7 @@
      {
       "Id": "1671120201",
       "Name": "Play_Music_EndCredits",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_EndCredits",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Play_Music_EndCredits",
       "GUID": "{2DC74057-57AD-48BF-B27F-BE350AD817A2}",
       "Color": "11",
       "MaxAttenuation": "0",
@@ -1364,19 +1449,8 @@
      {
       "Id": "962944353",
       "Name": "Play_Music_Ingame",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Ingame",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Play_Music_Ingame",
       "GUID": "{628B66A8-ACD5-4E50-BE6C-2C208D88A4E4}",
-      "Color": "11",
-      "MaxAttenuation": "0",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
-     },
-     {
-      "Id": "375057392",
-      "Name": "Play_Music_Intro",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Intro",
-      "GUID": "{926CAF9F-31DD-4183-9B63-5CDEBDB2DC65}",
       "Color": "11",
       "DurationType": "OneShot",
       "DurationMin": "33.88236",
@@ -1390,7 +1464,7 @@
      {
       "Id": "1699343283",
       "Name": "Play_Music_Menu",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Play_Music_Menu",
       "GUID": "{A2B81D60-857A-4B16-8B2C-B3426500522F}",
       "Color": "11",
       "DurationType": "Infinite",
@@ -1403,7 +1477,7 @@
      {
       "Id": "3570597135",
       "Name": "Play_Music_Sea",
-      "ObjectPath": "\\Events\\Default Work Unit\\Play_Music_Sea",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Play_Music_Sea",
       "GUID": "{3E25EE52-4EE5-46C3-9676-BE2F9D4C38A7}",
       "Color": "11",
       "DurationType": "OneShot",
@@ -1413,7 +1487,14 @@
        {
         "Id": "436563272"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3864769809"
+        }
+       ]
+      }
      },
      {
       "Id": "4010112751",
@@ -1472,6 +1553,42 @@
       "MediaRefs": [
        {
         "Id": "119220263"
+       }
+      ]
+     },
+     {
+      "Id": "264656916",
+      "Name": "Play_Trash",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Trash",
+      "GUID": "{8A3B1245-B095-47C4-9FF0-9D89D8514E3C}",
+      "Color": "18",
+      "DurationType": "OneShot",
+      "DurationMin": "2.2020493",
+      "DurationMax": "3.2418437",
+      "MediaRefs": [
+       {
+        "Id": "53887119"
+       },
+       {
+        "Id": "308739404"
+       },
+       {
+        "Id": "885289485"
+       },
+       {
+        "Id": "949993519"
+       },
+       {
+        "Id": "1050613822"
+       }
+      ],
+      "AuxBusRefs": [
+       {
+        "Id": "377355006",
+        "Name": "REV_Indoor",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\REV_Indoor",
+        "GUID": "{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}",
+        "Color": "13"
        }
       ]
      },
@@ -1702,7 +1819,7 @@
      {
       "Id": "555622955",
       "Name": "Stop_Music_Ingame",
-      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Music_Ingame",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Stop_Music_Ingame",
       "GUID": "{D2FD9450-3068-4AA5-BF69-E04C2974BB8A}",
       "Color": "11",
       "MaxAttenuation": "0",
@@ -1713,7 +1830,7 @@
      {
       "Id": "106912753",
       "Name": "Stop_Music_Menu",
-      "ObjectPath": "\\Events\\Default Work Unit\\Stop_Music_Menu",
+      "ObjectPath": "\\Events\\Default Work Unit\\Musics\\Stop_Music_Menu",
       "GUID": "{404B28A3-82F3-4BC3-ACF0-D7A904371302}",
       "Color": "11",
       "MaxAttenuation": "0",
@@ -1782,9 +1899,17 @@
       "DurationMin": "0",
       "DurationMax": "0"
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3993436217",
+      "Name": "GP_SC_Mus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_SC_Mus",
+      "GUID": "{F7BC2E00-9715-4D27-940D-1770B2F0DA45}"
+     }
     ]
    }
   ],
-  "FileHash": "{ECC9ECBA-C5F6-9204-8C92-96E8291252B3}"
+  "FileHash": "{69E2DA15-967E-6D63-DB7A-7395D2DC63E0}"
  }
 }

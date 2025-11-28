@@ -235,7 +235,7 @@
 								<Action Name="" ID="{D77BF9BD-E6B1-4604-820F-11B71FB5A4EE}" ShortID="266552014">
 									<ReferenceList>
 										<Reference Name="Target">
-											<ObjectRef Name="Rnd_Door_Closer_Close" ID="{E27F183D-C99E-456B-9DFA-0CD437667AA6}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+											<ObjectRef Name="Rnd_Door_Closet_Close" ID="{E27F183D-C99E-456B-9DFA-0CD437667AA6}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
@@ -552,129 +552,180 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Entity" ID="{9FA00341-5F56-4F0F-8D59-1EDE2D75B208}">
+							<ChildrenList>
+								<Action Name="" ID="{A7E78FF2-E3E5-42A4-BB4D-2B99C6BBF2DE}" ShortID="54551924">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="NPC_OS_EntityPresence_V01" ID="{4E8C9BD0-8CA0-4581-AD05-07C4957A3CCF}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Trash" ID="{8A3B1245-B095-47C4-9FF0-9D89D8514E3C}">
+							<ChildrenList>
+								<Action Name="" ID="{D72DFFDB-7226-43E1-91C1-9C60FE984A4B}" ShortID="360077284">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rnd_Trash_Open" ID="{5117E086-85FA-4E95-A389-498E3B4512FA}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{94C544D2-FDD8-48F1-ABA5-5EAE383C2B90}" ShortID="458928182">
+									<PropertyList>
+										<Property Name="Delay" Type="Real64" Value="1.5">
+											<ModifierList>
+												<ModifierInfo>
+													<Modifier Name="" ID="{C026F499-3BC8-4E05-9144-14BB67E37992}">
+														<PropertyList>
+															<Property Name="Enabled" Type="bool" Value="True"/>
+															<Property Name="Min" Type="Real64" Value="-0.7"/>
+														</PropertyList>
+													</Modifier>
+												</ModifierInfo>
+											</ModifierList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Rnd_Trash_Close" ID="{EE3BD068-867F-466E-AFBE-F13B38C68F58}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
-				<Event Name="Play_Music_Menu" ID="{A2B81D60-857A-4B16-8B2C-B3426500522F}">
+				<Folder Name="Musics" ID="{43C6E926-AD37-4731-B481-4F37DC2E5D9A}" ShortID="592440267">
 					<PropertyList>
 						<Property Name="Color" Type="int16" Value="11"/>
 						<Property Name="OverrideColor" Type="bool" Value="True"/>
 					</PropertyList>
 					<ChildrenList>
-						<Action Name="" ID="{3E3F154F-86DD-47FC-BF59-486651DD58A4}" ShortID="839539077">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Music_Intro" ID="{926CAF9F-31DD-4183-9B63-5CDEBDB2DC65}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="Inclusion" Type="bool" Value="False"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-				</Event>
-				<Event Name="Play_Music_EndCredits" ID="{2DC74057-57AD-48BF-B27F-BE350AD817A2}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{B81D4CE5-A7A3-4128-B815-273C33DD5D4C}" ShortID="188232568"/>
-						<Action Name="" ID="{859BB71B-CDAB-4486-9090-8E734613BA10}" ShortID="323169540">
+						<Event Name="Play_Music_EndCredits" ID="{2DC74057-57AD-48BF-B27F-BE350AD817A2}">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList/>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Music_Sea" ID="{3E25EE52-4EE5-46C3-9676-BE2F9D4C38A7}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{FFDCEC63-03D2-4399-B090-827600AB875E}" ShortID="696658661">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_SeaDiscover_V02_Cm" ID="{3E7B851B-76C7-4C43-BA13-464ED884258F}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Play_Music_Ingame" ID="{628B66A8-ACD5-4E50-BE6C-2C208D88A4E4}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{0175F68B-97B0-42DC-A536-FC1FBEF745AC}" ShortID="123858955">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_Intro_V01_Cm" ID="{580AD0A3-7F21-4663-96BD-957433CDCB52}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{D63250B0-8E5D-491A-87BB-EF1187DD0EF6}" ShortID="732974998">
+							<ChildrenList>
+								<Action Name="" ID="{B81D4CE5-A7A3-4128-B815-273C33DD5D4C}" ShortID="188232568"/>
+								<Action Name="" ID="{859BB71B-CDAB-4486-9090-8E734613BA10}" ShortID="323169540">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList/>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Music_Ingame" ID="{628B66A8-ACD5-4E50-BE6C-2C208D88A4E4}">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Music_Menu" ID="{404B28A3-82F3-4BC3-ACF0-D7A904371302}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{8CE9F876-5483-46E4-8F46-D912084A15D2}" ShortID="573223154">
+							<ChildrenList>
+								<Action Name="" ID="{0175F68B-97B0-42DC-A536-FC1FBEF745AC}" ShortID="123858955">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_Intro_V01_Cm" ID="{580AD0A3-7F21-4663-96BD-957433CDCB52}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+								<Action Name="" ID="{D63250B0-8E5D-491A-87BB-EF1187DD0EF6}" ShortID="732974998">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Music_Intro" ID="{926CAF9F-31DD-4183-9B63-5CDEBDB2DC65}">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="Inclusion" Type="bool" Value="False"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="Stop_Music_Ingame" ID="{D2FD9450-3068-4AA5-BF69-E04C2974BB8A}">
-					<PropertyList>
-						<Property Name="Color" Type="int16" Value="11"/>
-						<Property Name="OverrideColor" Type="bool" Value="True"/>
-					</PropertyList>
-					<ChildrenList>
-						<Action Name="" ID="{68A81E16-C2B0-4123-8ECF-CD79E705D372}" ShortID="426844713">
+						</Event>
+						<Event Name="Play_Music_Menu" ID="{A2B81D60-857A-4B16-8B2C-B3426500522F}">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-								<Property Name="FadeTime" Type="Real64" Value="1"/>
-								<Property Name="Scope" Type="int16" Value="1"/>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
 							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="VolunteerGameJam_Intro_V01_Cm" ID="{580AD0A3-7F21-4663-96BD-957433CDCB52}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
+							<ChildrenList>
+								<Action Name="" ID="{3E3F154F-86DD-47FC-BF59-486651DD58A4}" ShortID="839539077">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Music_Sea" ID="{3E25EE52-4EE5-46C3-9676-BE2F9D4C38A7}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{FFDCEC63-03D2-4399-B090-827600AB875E}" ShortID="696658661">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_SeaDiscover_V02_Cm" ID="{3E7B851B-76C7-4C43-BA13-464ED884258F}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music_Ingame" ID="{D2FD9450-3068-4AA5-BF69-E04C2974BB8A}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{68A81E16-C2B0-4123-8ECF-CD79E705D372}" ShortID="426844713">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="1"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_Intro_V01_Cm" ID="{580AD0A3-7F21-4663-96BD-957433CDCB52}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Music_Menu" ID="{404B28A3-82F3-4BC3-ACF0-D7A904371302}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ChildrenList>
+								<Action Name="" ID="{8CE9F876-5483-46E4-8F46-D912084A15D2}" ShortID="573223154">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+										<Property Name="Scope" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="VolunteerGameJam_MainMenu_V01_Cm" ID="{197EFB55-7D63-451C-9996-1D536094E173}" WorkUnitID="{9EDC1583-754A-427C-A95B-7BABCA303C40}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
-				</Event>
+				</Folder>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

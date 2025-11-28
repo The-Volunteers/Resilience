@@ -1,22 +1,23 @@
 Event	ID	Name			Wwise Object Path	Notes
 	17721092	Play_Grab			\Default Work Unit\SFX\Play_Grab	
-	106912753	Stop_Music_Menu			\Default Work Unit\Stop_Music_Menu	
+	106912753	Stop_Music_Menu			\Default Work Unit\Musics\Stop_Music_Menu	
 	236049130	Stop_Clock			\Default Work Unit\SFX\Stop_Clock	
-	375057392	Play_Music_Intro			\Default Work Unit\Play_Music_Intro	
-	555622955	Stop_Music_Ingame			\Default Work Unit\Stop_Music_Ingame	
+	264656916	Play_Trash			\Default Work Unit\SFX\Play_Trash	
+	555622955	Stop_Music_Ingame			\Default Work Unit\Musics\Stop_Music_Ingame	
 	569015603	Play_Amb_Outdoor			\Default Work Unit\SFX\Play_Amb_Outdoor	
 	646803528	Stop_Test_Beep_Loop			\Default Work Unit\Tests\Stop_Test_Beep_Loop	
 	678554441	Stop_Sink			\Default Work Unit\SFX\Stop_Sink	
 	793710381	Stop_Waterdrops			\Default Work Unit\SFX\Stop_Waterdrops	
-	962944353	Play_Music_Ingame			\Default Work Unit\Play_Music_Ingame	
+	962944353	Play_Music_Ingame			\Default Work Unit\Musics\Play_Music_Ingame	
 	979756790	Play_LightSwitch			\Default Work Unit\SFX\Play_LightSwitch	
 	1208637132	Play_Door_Closet_Open			\Default Work Unit\SFX\Play_Door_Closet_Open	
 	1585131240	Play_Door_Closet_Close			\Default Work Unit\SFX\Play_Door_Closet_Close	
 	1589278981	Play_Walk			\Default Work Unit\SFX\Play_Walk	
 	1660008929	Play_Door_Open			\Default Work Unit\SFX\Play_Door_Open	
-	1671120201	Play_Music_EndCredits			\Default Work Unit\Play_Music_EndCredits	
+	1671120201	Play_Music_EndCredits			\Default Work Unit\Musics\Play_Music_EndCredits	
 	1683224821	Stop_Amb_Outdoor			\Default Work Unit\SFX\Stop_Amb_Outdoor	
-	1699343283	Play_Music_Menu			\Default Work Unit\Play_Music_Menu	
+	1699343283	Play_Music_Menu			\Default Work Unit\Musics\Play_Music_Menu	
+	2130530439	Play_Entity			\Default Work Unit\SFX\Play_Entity	
 	2232761158	Play_Test_Beep_Short			\Default Work Unit\Tests\Play_Test_Beep_Short	
 	2292458263	Play_Door_Close			\Default Work Unit\SFX\Play_Door_Close	
 	2304778352	Play_Amb_Indoor			\Default Work Unit\SFX\Play_Amb_Indoor	
@@ -26,10 +27,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	3140964691	Stop_Walk			\Default Work Unit\SFX\Stop_Walk	
 	3313495947	Play_Waterdrops			\Default Work Unit\SFX\Play_Waterdrops	
 	3411414291	Stop_Fridge			\Default Work Unit\SFX\Stop_Fridge	
-	3570597135	Play_Music_Sea			\Default Work Unit\Play_Music_Sea	
+	3570597135	Play_Music_Sea			\Default Work Unit\Musics\Play_Music_Sea	
 	4010112751	Play_Sink			\Default Work Unit\SFX\Play_Sink	
 	4070979672	Play_Clock			\Default Work Unit\SFX\Play_Clock	
 	4174389764	Play_Cardboard			\Default Work Unit\SFX\Play_Cardboard	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3993436217	GP_SC_Mus			\Default Work Unit\GP_SC_Mus	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3864769809	Meter_SeaMusic	Wwise Meter			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	869562	Env_OS_Grab02_V01	.cache\7B\{7BC56319-93B4-010C-5D36-C1AA78A8745C}.wem		\Containers\Default Work Unit\Environment\Rnd_Grab\Env_OS_Grab02_V01		54848
@@ -39,6 +46,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	34740182	Env_OS_FallInCardboard_B11_V01	.cache\8E\{8EFA40DD-EB87-25E9-30B8-C4A45AA2B2C9}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard02\Env_OS_FallInCardboard_B11_V01		110648
 	39771751	Env_OS_FallInCardboard_A06_V01	.cache\9C\{9CD1D6FF-7F22-F987-590D-750F7539CFFA}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard01\Env_OS_FallInCardboard_A06_V01		58684
 	43306013	Env_OS_LightSwitch04_V01	.cache\4E\{4E984423-C8AA-EF20-8F5D-EBD900712264}.wem		\Containers\Default Work Unit\Environment\Rnd_LightSwitch\Env_OS_LightSwitch04_V01		18618
+	53887119	Env_OS_Trash_Open02_V01	.cache\9B\{9B515DF1-E710-E606-C7B1-FCB905F81C2E}.wem		\Containers\Default Work Unit\Environment\Rnd_Trash_Open\Env_OS_Trash_Open02_V01		113618
 	73334924	Amb_OS_Sink_WaterDrop10_V01	.cache\7C\{7C89BCB9-F093-3D32-E665-C8B5BF7C9E12}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop10_V01		24906
 	92366300	Env_OS_Door_Creak03_V01	.cache\6A\{6A3E99D9-03FE-9962-6C12-2ABDFA8FA5D8}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Creak\Env_OS_Door_Creak03_V01		164736
 	99093162	Amb_OS_Sink_WaterDrop12_V01	.cache\31\{31C7B85A-5B95-0160-27A3-075A2F0898FC}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop12_V01		30068
@@ -68,6 +76,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	283081537	Amb_OS_Sink_WaterDrop11_V01	.cache\BB\{BBBDECE1-110C-DF9A-7125-9B2C865F5FA3}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop11_V01		29376
 	294675011	Env_OS_Door_Creak04_V01	.cache\A6\{A63AAC14-7180-F838-07BF-A26E57F26FC6}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Creak\Env_OS_Door_Creak04_V01		138276
 	307666306	Plyr_OS_Walk_Carpet08_V01	.cache\F0\{F005DC22-2CF3-491A-D66A-C3FE84401A73}.wem		\Containers\Default Work Unit\Player\Rnd_Walk_Player\Plyr_OS_Walk_Carpet08_V01		44968
+	308739404	Env_OS_Trash_Open01_V01	.cache\9A\{9A2CA68A-D9C7-2CD2-65D3-555EBC88D1F1}.wem		\Containers\Default Work Unit\Environment\Rnd_Trash_Open\Env_OS_Trash_Open01_V01		153642
 	319489387	Amb_OS_Outside_Waves01_V01	.cache\F4\{F4F15EDC-31A3-5E3F-EE58-E5A8954ADC27}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waves\Amb_OS_Outside_Waves01_V01		940896
 	333928999	Env_OS_Door_Creak01_V01	.cache\36\{366F1EB0-743D-2F07-CB7D-A952B3B15CD1}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Creak\Env_OS_Door_Creak01_V01		190418
 	341665048	Amb_OS_Sink_WaterDrop22_V01	.cache\7A\{7A05710B-825E-FF39-6523-3261C5C6C374}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop22_V01		24906
@@ -80,7 +89,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	403454493	Env_OS_Grab12_V01	.cache\49\{49B29B6E-F09B-C725-23FE-996141AF94DA}.wem		\Containers\Default Work Unit\Environment\Rnd_Grab\Env_OS_Grab12_V01		57582
 	410887656	Env_OS_FallInCardboard_B08_V01	.cache\F8\{F82197D3-7968-BCA3-24A4-8379CDCCD9A4}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard02\Env_OS_FallInCardboard_B08_V01		90616
 	416586342	Env_OS_Sink_Close02_V01	.cache\4A\{4A8085C4-9974-5570-DFA8-02E479565CF9}.wem		\Containers\Default Work Unit\Environment\Rnd_Sink_Close\Env_OS_Sink_Close02_V01		26028
-	436563272	VolunteerGameJam_SeaDiscover_V02_Cm	.cache\78\{78FD76C0-0CCE-CFCB-119B-C8ED5EC5AA84}.wem		\Containers\Default Work Unit\Music\VolunteerGameJam_SeaDiscover_V02_Cm		1743344
+	436563272	VolunteerGameJam_SeaDiscover_V02_Cm	.cache\57\{5753138D-5F54-AE21-9CD7-EC43DE78456F}.wem		\Containers\Default Work Unit\Music\VolunteerGameJam_SeaDiscover_V02_Cm		1743344
 	436573777	Amb_OS_Outside_Waves04_V01	.cache\C6\{C6DC72EC-8EB9-A8E7-1E0F-26106E72539F}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waves\Amb_OS_Outside_Waves04_V01		1058496
 	450185035	Plyr_OS_Walk_Carpet15_V01	.cache\B1\{B1E5BB25-BBEF-ADDE-DD95-D8AC3D191F59}.wem		\Containers\Default Work Unit\Player\Rnd_Walk_Player\Plyr_OS_Walk_Carpet15_V01		46892
 	459172697	Amb_OS_Sink_WaterDrop25_V01	.cache\A3\{A3ECCB96-1CA6-A907-F8BA-7CE35F17DAEE}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop25_V01		29090
@@ -106,12 +115,12 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	655129524	Env_OS_Grab04_V01	.cache\38\{380C89C9-9104-0EB8-34C6-296AD5DF162A}.wem		\Containers\Default Work Unit\Environment\Rnd_Grab\Env_OS_Grab04_V01		54218
 	659363562	Amb_LP_Room_V01	.cache\50\{50B35F0A-3E75-A194-C141-61031D5BA6E6}.wem		\Containers\Default Work Unit\Ambiances\Amb_LP_Room_V01		16228896
 	679095396	Amb_OS_Sink_WaterDrop06_V01	.cache\5E\{5EAF770A-2FDA-3E71-52B4-5FA43AAAE022}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop06_V01		63040
-	679227403	Env_OS_Door_Closet_Close01_V01	.cache\50\{50C7DBD6-385E-7E00-0992-35B28FF5E7EB}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closer_Close\Env_OS_Door_Closet_Close01_V01		102918
+	679227403	Env_OS_Door_Closet_Close01_V01	.cache\50\{50C7DBD6-385E-7E00-0992-35B28FF5E7EB}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closet_Close\Env_OS_Door_Closet_Close01_V01		102918
 	684008166	Amb_LP_Sink_Open_V01	.cache\1F\{1F8056D9-E97A-A13E-E407-77B3E06A72DE}.wem		\Containers\Default Work Unit\Ambiances\Amb_LP_Sink_Open_V01		1940380
 	691521752	Env_OS_FallInCardboard_B06_V01	.cache\92\{92FFB109-C009-02F1-0188-7C63C4E20644}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard02\Env_OS_FallInCardboard_B06_V01		44488
 	714506673	Amb_OS_Sink_WaterDrop02_V01	.cache\27\{2776E197-AD36-592D-376E-B23225F92F6A}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop02_V01		24906
 	758004143	Env_OS_Door_Close01_V01	.cache\59\{592C1A24-BC4F-3DB3-CD28-2091DFF83EFA}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Close\Env_OS_Door_Close01_V01		55638
-	758104346	Env_OS_Door_Closet_Close02_V01	.cache\43\{43264AC5-6E1D-D2A2-888C-E4C28D7D71DD}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closer_Close\Env_OS_Door_Closet_Close02_V01		105610
+	758104346	Env_OS_Door_Closet_Close02_V01	.cache\43\{43264AC5-6E1D-D2A2-888C-E4C28D7D71DD}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closet_Close\Env_OS_Door_Closet_Close02_V01		105610
 	773033104	Amb_LP_Outside_V01	.cache\32\{3229C7B3-40BF-E027-6BA1-AAE3533680CE}.wem		\Containers\Default Work Unit\Ambiances\Amb_LP_Outside_V01		7408896
 	773762189	Env_OS_Door_Closet_Open01_V01	.cache\3A\{3A3C1970-82AF-A4EC-F901-4D1E3412AA23}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closet_Open\Env_OS_Door_Closet_Open01_V01		95296
 	793304898	Env_OS_Door_Closet_Open02_V01	.cache\3A\{3A357985-DFB7-5F6F-8A8E-E2F7E92B5E09}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Closet_Open\Env_OS_Door_Closet_Open02_V01		119018
@@ -125,6 +134,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	856254841	Amb_OS_Sink_WaterDrop21_V01	.cache\C6\{C6962886-F4F6-DB37-16C1-5DA243C12069}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop21_V01		25292
 	868534807	Env_OS_FallInCardboard_B07_V01	.cache\A5\{A586FA02-152E-5E83-6964-B656239EE8E5}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard02\Env_OS_FallInCardboard_B07_V01		89132
 	882641030	Plyr_OS_Walk_Carpet11_V01	.cache\B8\{B89FACB4-0F6A-4F16-2BD2-649BD931D26E}.wem		\Containers\Default Work Unit\Player\Rnd_Walk_Player\Plyr_OS_Walk_Carpet11_V01		45494
+	885289485	Env_OS_Trash_Close01_V01	.cache\3F\{3FA77742-67F4-CE0E-7D2F-D7B84F711506}.wem		\Containers\Default Work Unit\Environment\Rnd_Trash_Close\Env_OS_Trash_Close01_V01		131110
 	891441437	Plyr_OS_Walk_Carpet14_V01	.cache\22\{220CD2F9-9F73-34AF-EC60-DB1428222F65}.wem		\Containers\Default Work Unit\Player\Rnd_Walk_Player\Plyr_OS_Walk_Carpet14_V01		46732
 	892566723	Amb_OS_Sink_WaterDrop14_V01	.cache\32\{321A36E6-3510-87E2-6004-1BEFC40153F9}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop14_V01		24906
 	909656673	Amb_OS_Outside_Waves02_V01	.cache\D6\{D6AE6921-37F5-35DA-4B79-CAD10A19D602}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waves\Amb_OS_Outside_Waves02_V01		882096
@@ -134,6 +144,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	940708693	Env_OS_Sink_Open02_V01	.cache\B8\{B8394C66-4AA5-D0D7-4352-350863ED09E2}.wem		\Containers\Default Work Unit\Environment\Rnd_Sink_Open\Env_OS_Sink_Open02_V01		34800
 	945046106	Amb_OS_Sink_WaterDrop05_V01	.cache\33\{330A8F29-9754-C7A8-02EE-C5C7AA2B67B0}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop05_V01		24906
 	949695308	Amb_OS_Outside_Waves07_V01	.cache\C6\{C6F101DC-313B-8F89-CA17-9685B8DBBB38}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waves\Amb_OS_Outside_Waves07_V01		795036
+	949993519	Env_OS_Trash_Close02_V01	.cache\08\{08D64292-D72F-652D-8491-97D29F362953}.wem		\Containers\Default Work Unit\Environment\Rnd_Trash_Close\Env_OS_Trash_Close02_V01		145104
 	966656206	Env_OS_Door_Creak05_V01	.cache\57\{57EE221F-BE27-DDAA-BBE8-D4C0C60CBFCD}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Creak\Env_OS_Door_Creak05_V01		114756
 	970775052	Env_OS_FallInCardboard_A01_V01	.cache\F5\{F592ADF5-DABC-A150-E7D2-ED8F793F615D}.wem		\Containers\Default Work Unit\Environment\Rnd_Cardboard01\Env_OS_FallInCardboard_A01_V01		100384
 	972272881	Env_OS_LightSwitch03_V01	.cache\D4\{D46957D3-FE37-34EF-3735-DA5B06AAE581}.wem		\Containers\Default Work Unit\Environment\Rnd_LightSwitch\Env_OS_LightSwitch03_V01		18618
@@ -144,8 +155,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	1020294705	Plyr_OS_Walk_Carpet09_V01	.cache\04\{042DBCB8-5068-E66D-DF30-4CDC4022073B}.wem		\Containers\Default Work Unit\Player\Rnd_Walk_Player\Plyr_OS_Walk_Carpet09_V01		47758
 	1022534527	Env_OS_Door_Open02_V01	.cache\DA\{DA2B80C9-670A-6B81-2E1C-73B9B020A1BF}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Open\Env_OS_Door_Open02_V01		64734
 	1034616812	VolunteerGameJam_MainMenu_V01_Cm	.cache\D2\{D217181D-F49A-574F-1A7D-FD9D049ADAE0}.wem		\Containers\Default Work Unit\Music\VolunteerGameJam_MainMenu_V01_Cm		12872532
+	1050613822	Env_OS_Trash_Open03_V01	.cache\91\{91883785-D75A-B570-5E0B-41C033210523}.wem		\Containers\Default Work Unit\Environment\Rnd_Trash_Open\Env_OS_Trash_Open03_V01		63568
 	1051112153	Env_OS_Door_Open01_V01	.cache\AE\{AE31FB1D-F392-CDB9-5BBA-14271FD59243}.wem		\Containers\Default Work Unit\Environment\Rnd_Door_Open\Env_OS_Door_Open01_V01		65652
 	1060254462	Env_OS_Grab11_V01	.cache\C8\{C8D9069E-BFD8-2804-32EB-28D16CC929DB}.wem		\Containers\Default Work Unit\Environment\Rnd_Grab\Env_OS_Grab11_V01		62842
 	1060705426	Amb_OS_Sink_WaterDrop28_V01	.cache\D8\{D83643CE-5645-95F4-E09F-EEAF5540C40F}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop28_V01		24906
+	1068209839	NPC_OS_EntityPresence_V01	.cache\A3\{A3CFF4D0-2215-AA96-ABFA-7726FCDB2D4A}.wem		\Containers\Default Work Unit\Ambiances\NPC_OS_EntityPresence_V01		434230
 	1068766287	Amb_OS_Sink_WaterDrop01_V01	.cache\8D\{8DDCBBBB-FEC2-C9B2-B334-0FC9E7949AA9}.wem		\Containers\Default Work Unit\Ambiances\Rnd_Waterdrop\Amb_OS_Sink_WaterDrop01_V01		24906
 
