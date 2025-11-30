@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 
 public class Item : MonoBehaviour, Interactable
 {
@@ -8,6 +9,7 @@ public class Item : MonoBehaviour, Interactable
     [SerializeField] private bool canBeAssembled;
     [SerializeField] private bool canBeObserved = true;
     [SerializeField] private bool hasTheClueBeenfound = false;
+    public int IndexOrder;
     public bool IsShakeEffectIsPlaying { get; set; } = false;
 
     private bool isHeld = false;
@@ -55,8 +57,8 @@ public class Item : MonoBehaviour, Interactable
 
     public void Interact()
     {
+        if (!CheckIfIsObjectToFind()) { return; }
         IsHeld = true;
-
         if (canBeObserved)
         {
             LookAt();
@@ -70,14 +72,24 @@ public class Item : MonoBehaviour, Interactable
     }
 
     private void LookAt()
-    {
+    {      
         GameManager.Instance.ObserveItem.Invoke(transform);
         GameManager.Instance.IsGamePaused = true;
+        
     }
     private void Equip()
     {
         GameManager.Instance.StopObservingItem.Invoke(transform);
         GameManager.Instance.IsGamePaused = false;
+    }
+
+    public bool CheckIfIsObjectToFind()
+    {
+        if(GameManager.Instance.ObjectIndexToFind == IndexOrder)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void Dispose()

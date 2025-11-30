@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
 
     public bool ItemEffectisPlaying {  get; set; } = false;
+    public int ObjectIndexToFind {  get; private set; } = 0;
     
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
@@ -147,6 +148,7 @@ public class GameManager : MonoBehaviour
             {
                 entity.AdvanceStoryEntity();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+                ObjectIndexToFind++;
             }
         }
         // make a visual effect...
@@ -157,7 +159,7 @@ public class GameManager : MonoBehaviour
         
         entity.AdvanceStoryEntity();
         viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
-            
+        ObjectIndexToFind++;
     }
 
     private void PauseGame()

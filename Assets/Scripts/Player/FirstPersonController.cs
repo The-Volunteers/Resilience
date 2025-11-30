@@ -148,7 +148,6 @@ public class FirstPersonController : MonoBehaviour
             if (transform == null) { return; }
             if (transform.TryGetComponent<Interactable>(out Interactable interactable))
             {
-                //CheckIfDepositBox(transform); // NEED TO BE IN OBJECT PLACER !!!
                 interactable.Interact();               
             }
             else
@@ -179,6 +178,21 @@ public class FirstPersonController : MonoBehaviour
         if(GameManager.Instance.littleShake == null) { return; }
         //if (item.IsShakeEffectIsPlaying) {  return; }
         if (GameManager.Instance.ItemEffectisPlaying) {  return; }
+        if(transform.TryGetComponent<Item>(out Item item))
+        {
+            if(item.CheckIfIsObjectToFind())
+            {
+                DoShakeEffect(transform);
+            }
+        }
+        if (transform.CompareTag("DepositBox")) 
+        {
+            DoShakeEffect(transform);
+        }
+    }
+
+    private void DoShakeEffect(Transform transform)
+    {
         GameManager.Instance.littleShake(transform, 0.1f, 1f, 10, 90, true); //item.IsShakeEffectIsPlaying
     }
 
@@ -217,7 +231,8 @@ public class FirstPersonController : MonoBehaviour
     }
 
     private void CheckIfItsAnItem(Transform transform, Item item)
-    {       
+    {
+        if(GameManager.Instance.ObjectIndexToFind != item.IndexOrder) { return; }
         // objectHeld, objectHeldCenter and clue must be reset when the object is dropped
         objectHeld = transform;
         objectHeldCenter = GetCenterOfTheObjectHeld(objectHeld);

@@ -2710,7 +2710,7 @@ Transform:
   m_GameObject: {fileID: 387356460}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.001, y: -0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3593,7 +3593,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -3614,6 +3614,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 3
 --- !u!43 &581792292
 Mesh:
   m_ObjectHideFlags: 0
@@ -5280,7 +5281,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
@@ -5301,6 +5302,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 2
 --- !u!1001 &760837091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7310,12 +7312,12 @@ PrefabInstance:
     - target: {fileID: 7255330604547153426, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7255330604547153426, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7255330604547153426, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
@@ -7325,12 +7327,12 @@ PrefabInstance:
     - target: {fileID: 7255330604547153426, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       propertyPath: m_Layer
-      value: 10
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11963,6 +11965,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 0
 --- !u!1001 &1551347602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12420,6 +12423,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 0
 --- !u!65 &1646398397
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13514,6 +13518,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 0
 --- !u!1001 &1782652339
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23810,6 +23815,7 @@ MonoBehaviour:
   canBeAssembled: 0
   canBeObserved: 1
   hasTheClueBeenfound: 0
+  IndexOrder: 1
 --- !u!65 &2015900005
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23825,7 +23831,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
