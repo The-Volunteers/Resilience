@@ -5013,11 +5013,11 @@ MonoBehaviour:
   mouseSensitivity: 0.1
   upDownLookRange: 80
   gravityMultiplier: 1
-  interactionDistance: 3
+  interactionDistance: 2
   interactableLayer:
     serializedVersion: 2
     m_Bits: 128
-  interactionCooldown: 2
+  interactionCooldown: 1
   characterController: {fileID: 666929608}
   mainCamera: {fileID: 330585545}
   playerInputHandler: {fileID: 251608795}
@@ -7332,7 +7332,7 @@ PrefabInstance:
     - target: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7350,6 +7350,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2119622076}
+    - targetCorrespondingSourceObject: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119622080}
   m_SourcePrefab: {fileID: 100100000, guid: da34de2783083a34a8e6dadca18926aa, type: 3}
 --- !u!4 &1040608259 stripped
 Transform:
@@ -24229,6 +24233,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7966123, y: 2.15, z: 0.08}
   m_Center: {x: -0.39995018, y: 1.0750763, z: 0}
+--- !u!114 &2119622080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119622072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e55a64077917934c9e98283574d5d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openAngle: 90
+  closeAngle: 0
+  animationDuration: 0.5
 --- !u!1001 &2122570635
 PrefabInstance:
   m_ObjectHideFlags: 0

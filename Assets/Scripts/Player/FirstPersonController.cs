@@ -211,6 +211,7 @@ public class FirstPersonController : MonoBehaviour
         GameManager.Instance.IsGamePaused = false;
         interactionCooldown = 1f;
         interactionTimerStart = true;
+        if (!interactiveItem.HasTheClueBeenfound) { return; }
         interactiveItem.CanBeObserved = false;
     }
 

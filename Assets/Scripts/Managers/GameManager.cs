@@ -129,6 +129,7 @@ public class GameManager : MonoBehaviour
             {
                 entity.AdvanceStoryEntity();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+                ObjectIndexToFind++;
             }
         }
         // make a visual effect...
