@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public bool ItemEffectisPlaying {  get; set; } = false;
     public int ObjectIndexToFind {  get; private set; } = 0;
+    public bool IsplayerOntheRoof { get; private set; } = false;
     
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
@@ -39,6 +41,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Transform playerItemObserverPosition;
     [SerializeField] private Transform playerEquipedItemPosition;
     [SerializeField] private Entity entity;
+    [SerializeField] private Transform playerRoofPosition;
+    [SerializeField] private Transform playerHomePosition;
+
+    [Header("Objects References")]
+    [SerializeField] private GameObject ladder;
+
+    [Header("Scripts References")]
+    [SerializeField] private RippleEffectController rippleEffectController;
 
     [Header("Unity Events")]
     public UnityEvent<Transform> ObserveItem;
@@ -47,6 +57,9 @@ public class GameManager : MonoBehaviour
     public UnityEvent<Transform> ThrowAwayItem;
     public UnityEvent<Transform> ForceAdvanceStory;
     public UnityEvent<string> NpcInteraction;
+    public UnityEvent GoingToTheRoof;
+    public UnityEvent GoingBackHome;
+    public UnityEvent FoundClueEffect;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
     public ShakeEffect littleShake;
@@ -70,6 +83,9 @@ public class GameManager : MonoBehaviour
         DropItem.AddListener(DeactivateItemPlacementMode);
         ThrowAwayItem.AddListener(DestroyItem);
         ForceAdvanceStory.AddListener(Advance);
+        GoingToTheRoof.AddListener(GoToTheRevealLocation);
+        GoingBackHome.AddListener(GoToHomeLocation);
+        FoundClueEffect.AddListener(rippleEffectController.TriggerRipple);
     }
 
     // Update is called once per frame
@@ -148,6 +164,7 @@ public class GameManager : MonoBehaviour
             if (item.HasTheClueBeenfound)
             {
                 entity.AdvanceStoryEntity();
+                ActivateLadder();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
                 ObjectIndexToFind++;
             }
@@ -159,8 +176,28 @@ public class GameManager : MonoBehaviour
     {
         
         entity.AdvanceStoryEntity();
+        ActivateLadder();
         viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
         ObjectIndexToFind++;
+    }
+
+    private void GoToTheRevealLocation()
+    {
+        viewManager.MoveObjectInWorld(playerController.transform, playerRoofPosition);
+        IsplayerOntheRoof = true;
+    }
+    private void GoToHomeLocation()
+    {
+        viewManager.MoveObjectInWorld(playerController.transform, playerHomePosition);
+        IsplayerOntheRoof = false;
+    }
+
+    private void ActivateLadder()
+    {
+        if(entity.actualEntityStoryLocation.index >= 4)
+        {
+            ladder.SetActive(true);
+        }
     }
 
     private void PauseGame()

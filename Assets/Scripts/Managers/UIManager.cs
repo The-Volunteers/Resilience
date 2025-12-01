@@ -9,8 +9,10 @@ public class UIManager : MonoBehaviour
     [Header("Panel References")]
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject creditsPanel;
-    [Header("Panel References")]
+    [Header("Components References")]
     [SerializeField] private TMP_Text textComponent;
+    [Header("Scripts References")]
+    [SerializeField] private RippleEffectController rippleEffectController;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,7 +36,7 @@ public class UIManager : MonoBehaviour
 
     public void LaunchScene()
     {
-        SceneManager.LoadScene("ResilienceScene", LoadSceneMode.Additive);
+        SceneManager.LoadScene("ResilienceScene", LoadSceneMode.Single);
     }
 
     public void ChangeTextColor(Color color)

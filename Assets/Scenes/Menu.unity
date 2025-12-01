@@ -2241,6 +2241,7 @@ GameObject:
   - component: {fileID: 1837431182}
   - component: {fileID: 1837431181}
   - component: {fileID: 1837431185}
+  - component: {fileID: 1837431186}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2346,9 +2347,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e97628c5ca0d6c74b976f23dcaee23dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuPanel: {fileID: 0}
+  menuPanel: {fileID: 36817403}
   creditsPanel: {fileID: 0}
-  textComponent: {fileID: 0}
+  textComponent: {fileID: 407771530}
+--- !u!114 &1837431186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837431180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 946eb2167aa4f8b4ab519d6df7e9e3bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  postProcessVolume: {fileID: 0}
+  rippleFeature: {fileID: -3385108190333965557, guid: c40be3174f62c4acf8c1216858c64956,
+    type: 2}
+  rippleDuration: 2
+  intensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1971773935
 GameObject:
   m_ObjectHideFlags: 0
