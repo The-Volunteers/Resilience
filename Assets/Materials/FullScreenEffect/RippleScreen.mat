@@ -140,7 +140,7 @@ Material:
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _UnscaledTime: 0.0235969
+    - _UnscaledTime: 0.0176215
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
