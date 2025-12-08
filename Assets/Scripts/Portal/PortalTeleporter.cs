@@ -26,6 +26,7 @@ public class PortalTeleporter : MonoBehaviour
                 player.position = transform.position + positionOffset;
 
                 playerIsOverlapping = false;
+                GameManager.Instance.HasTriedToGetOut = true;
             }
         }
     }

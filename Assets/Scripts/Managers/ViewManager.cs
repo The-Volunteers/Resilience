@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ViewManager : MonoBehaviour
 {
+    [SerializeField] private UIManager UIManager;
     // Start is called before the first frame update
     void Start()
     {
-        
+        //GameManager.Instance.DisplayDialogue.AddListener(UIManager.ShowMessage);
+        GameManager.Instance.NpcInteraction.AddListener(UIManager.ShowMessage);
     }
 
     // Update is called once per frame

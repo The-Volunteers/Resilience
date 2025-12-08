@@ -31,7 +31,8 @@ public class GameManager : MonoBehaviour
     public bool ItemEffectisPlaying {  get; set; } = false;
     public int ObjectIndexToFind {  get; private set; } = 0;
     public bool IsplayerOntheRoof { get; private set; } = false;
-    
+    public bool HasTriedToGetOut { get; set; } = false;
+
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
 
@@ -57,12 +58,15 @@ public class GameManager : MonoBehaviour
     public UnityEvent<Transform> ThrowAwayItem;
     public UnityEvent<Transform> ForceAdvanceStory;
     public UnityEvent<string> NpcInteraction;
+    //public UnityEvent<string> DisplayDialogue;
     public UnityEvent GoingToTheRoof;
     public UnityEvent GoingBackHome;
     public UnityEvent FoundClueEffect;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
     public ShakeEffect littleShake;
+
+    public delegate void AfficherMessage(string message);
 
     private void Awake()
     {
@@ -86,6 +90,7 @@ public class GameManager : MonoBehaviour
         GoingToTheRoof.AddListener(GoToTheRevealLocation);
         GoingBackHome.AddListener(GoToHomeLocation);
         FoundClueEffect.AddListener(rippleEffectController.TriggerRipple);
+        IsplayerOntheRoof = false;       
     }
 
     // Update is called once per frame

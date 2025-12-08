@@ -20,17 +20,32 @@ public class Entity : MonoBehaviour, Interactable
     public EntityStoryAdvancement actualEntityStoryLocation { get; private set; }
     private bool firstTimeHoldingAnObject = true;
     private int storyIndex = 0;
-    private bool first = true;
+    private int nbInteraction = 0;
+    private bool once = true;
+    private string tryingToEscapeDialogue = "Ha ! Looks like you are stuck in here. Find objects of interest and put everything in order";
 
 
     public void Interact()
     {
-        if (first)
+        nbInteraction++;
+        //if ((actualEntityStoryLocation.index == 0 && GameManager.Instance.HasTriedToGetOut))
+        //{
+        //    GameManager.Instance.NpcInteraction.Invoke(tryingToEscapeDialogue);
+        //    return;
+        //}
+        // Trigger dialogue has tried to escape with the collider of the door...
+
+
+        if (nbInteraction == 2)
         {
+            GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
             GameManager.Instance.ForceAdvanceStory.Invoke(transform);
-            first = false;
+            return;
         }
+
+
         GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
+
     }
 
     // Start is called before the first frame update
@@ -42,7 +57,14 @@ public class Entity : MonoBehaviour, Interactable
     // Update is called once per frame
     void Update()
     {
-
+        if (GameManager.Instance.HasTriedToGetOut)
+        {
+            if (once)
+            {
+                GameManager.Instance.NpcInteraction.Invoke(tryingToEscapeDialogue);
+                once = false;
+            }
+        }
     }
 
     public void AdvanceStoryEntity()
