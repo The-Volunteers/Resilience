@@ -35,17 +35,21 @@ public class Entity : MonoBehaviour, Interactable
         //}
         // Trigger dialogue has tried to escape with the collider of the door...
 
+        
 
         if (nbInteraction == 2)
         {
-            GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
+            //GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
             GameManager.Instance.ForceAdvanceStory.Invoke(transform);
             return;
         }
 
 
         GameManager.Instance.NpcInteraction.Invoke(actualEntityStoryLocation.dialogue);
-
+        if(actualEntityStoryLocation.index >= 4)
+        {
+            GameManager.Instance.OpenExitDoor.Invoke();
+        }
     }
 
     // Start is called before the first frame update

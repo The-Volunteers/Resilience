@@ -10,6 +10,7 @@ public class Item : MonoBehaviour, Interactable
     [SerializeField] private bool canBeObserved = true;
     [SerializeField] private bool hasTheClueBeenfound = false;
     public int IndexOrder;
+    public string Description;
     public bool IsShakeEffectIsPlaying { get; set; } = false;
 
     private bool isHeld = false;

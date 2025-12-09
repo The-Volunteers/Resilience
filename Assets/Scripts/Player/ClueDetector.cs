@@ -57,6 +57,7 @@ public class ClueDetector : MonoBehaviour
                 Debug.Log("Clue Found !!");
                 item.HasTheClueBeenfound = true;
                 GameManager.Instance.FoundClueEffect.Invoke();
+                GameManager.Instance.NpcInteraction.Invoke(item.Description);
             }
         }
         else

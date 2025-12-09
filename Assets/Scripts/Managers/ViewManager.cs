@@ -6,6 +6,9 @@ using UnityEngine.Events;
 public class ViewManager : MonoBehaviour
 {
     [SerializeField] private UIManager UIManager;
+    [SerializeField] private GameObject portal;
+    [SerializeField] private GameObject portalColider;
+    [SerializeField] private GameObject endPortal;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,5 +37,18 @@ public class ViewManager : MonoBehaviour
     {
         ItemToMove.position = placementLocation.position;
         ItemToMove.localRotation = placementLocation.localRotation;
+    }
+
+    public void DisplayEndPortal()
+    {
+        portal.SetActive(false);
+        portalColider.SetActive(false);
+        endPortal.SetActive(true);
+    }
+    public void GoTpEndPanel()
+    {
+        UIManager.ActivateEndPanel();
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

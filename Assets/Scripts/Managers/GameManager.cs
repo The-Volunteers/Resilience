@@ -62,6 +62,8 @@ public class GameManager : MonoBehaviour
     public UnityEvent GoingToTheRoof;
     public UnityEvent GoingBackHome;
     public UnityEvent FoundClueEffect;
+    public UnityEvent OpenExitDoor;
+    public UnityEvent EndGame;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
     public ShakeEffect littleShake;
@@ -91,6 +93,8 @@ public class GameManager : MonoBehaviour
         GoingBackHome.AddListener(GoToHomeLocation);
         FoundClueEffect.AddListener(rippleEffectController.TriggerRipple);
         IsplayerOntheRoof = false;       
+        OpenExitDoor.AddListener(viewManager.DisplayEndPortal);
+        EndGame.AddListener(viewManager.GoTpEndPanel);
     }
 
     // Update is called once per frame

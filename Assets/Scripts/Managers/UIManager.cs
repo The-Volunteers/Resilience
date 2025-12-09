@@ -11,12 +11,13 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject creditsPanel;
     [SerializeField] private GameObject dialoguePanel;
+    [SerializeField] private GameObject endPanel;
     [Header("Components References")]
     [SerializeField] private TMP_Text textComponent;
 
     [Header("Dialogue Settings")]
     [SerializeField] private float fadeInDuration = 0.5f;
-    [SerializeField] private float dialogueDuration = 3f;
+    [SerializeField] private float dialogueDuration = 4f;
     [SerializeField] private float fadeOutDuration = 0.5f;
     [SerializeField] private Ease fadeEase = Ease.InOutQuad;
 
@@ -50,9 +51,9 @@ public class UIManager : MonoBehaviour
         panel.SetActive(false);
     }
 
-    public void LaunchScene()
+    public void LaunchScene(string sceneName)
     {
-        SceneManager.LoadScene("ResilienceScene", LoadSceneMode.Single);
+        SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
     }
 
     public void ChangeTextColor(Color color)
@@ -95,6 +96,11 @@ public class UIManager : MonoBehaviour
         dialogueFadeSequence?.Kill() ;
         dialogueCanvasGroup.alpha = 0f;
         dialoguePanel.SetActive(false);
+    }
+
+    public void ActivateEndPanel()
+    {
+        endPanel.SetActive(true);
     }
 
     private void OnDestroy()

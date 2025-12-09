@@ -255,13 +255,13 @@ public class FirstPersonController : MonoBehaviour
 
     private void ApplyHorizontalRotationToHeldObject(float rotationAmount)
     {
-        //objectHeld.RotateAround(objectHeld.position, Vector3.up, rotationAmount);
-        objectHeld.RotateAround(objectHeldCenter, Vector3.up, rotationAmount);
+        Vector3 CameraUp = Camera.main.transform.up;
+        objectHeld.RotateAround(objectHeldCenter, CameraUp, rotationAmount);
     }
     private void ApplyVerticalRotationToHeldObject(float rotationAmount)
     {
-        //objectHeld.RotateAround(objectHeld.position, Vector3.left, rotationAmount);
-        objectHeld.RotateAround(objectHeldCenter, Vector3.left, rotationAmount);
+        Vector3 CameraRight = Camera.main.transform.right;
+        objectHeld.RotateAround(objectHeldCenter, CameraRight, rotationAmount);
     }
 
     private void InteractionTimerManager()
