@@ -5412,9 +5412,9 @@ MonoBehaviour:
   normalAxis: 2
   clipPlaneOffset: 0.07
   invertClipDirection: 0
-  enableClipping: 1
-  showDebugInfo: 1
-  showGizmos: 1
+  enableClipping: 0
+  showDebugInfo: 0
+  showGizmos: 0
 --- !u!1 &591222877
 GameObject:
   m_ObjectHideFlags: 0
@@ -8350,7 +8350,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 809863997}
+      addedObject: {fileID: 809864001}
   m_SourcePrefab: {fileID: 100100000, guid: da34de2783083a34a8e6dadca18926aa, type: 3}
 --- !u!4 &809863991 stripped
 Transform:
@@ -8385,7 +8385,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7966125, y: 2.15, z: 0.08}
   m_Center: {x: -0.39995027, y: 1.0750763, z: 0}
---- !u!114 &809863997
+--- !u!114 &809864001
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8394,7 +8394,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 809863992}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdc63cccf32627d469cd6fbe24dcd548, type: 3}
+  m_Script: {fileID: 11500000, guid: 60f809ca22830b943be2b24bab1371b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &832575517

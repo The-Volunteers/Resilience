@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     public bool ItemEffectisPlaying {  get; set; } = false;
     public int ObjectIndexToFind {  get; private set; } = 0;
-    public bool IsplayerOntheRoof { get; private set; } = false;
+    public bool IsplayerOntheRoof { get; private set; }
     public bool HasTriedToGetOut { get; set; } = false;
 
     [Header("Manager References")]
@@ -89,7 +89,7 @@ public class GameManager : MonoBehaviour
         DropItem.AddListener(DeactivateItemPlacementMode);
         ThrowAwayItem.AddListener(DestroyItem);
         ForceAdvanceStory.AddListener(Advance);
-        GoingToTheRoof.AddListener(GoToTheRevealLocation);
+        GoingToTheRoof.AddListener(GoToTheRoofLocation);
         GoingBackHome.AddListener(GoToHomeLocation);
         FoundClueEffect.AddListener(rippleEffectController.TriggerRipple);
         IsplayerOntheRoof = false;       
@@ -190,15 +190,21 @@ public class GameManager : MonoBehaviour
         ObjectIndexToFind++;
     }
 
-    private void GoToTheRevealLocation()
+    private void GoToTheRoofLocation()
     {
+        //IsplayerOntheRoof = true;
+        playerController.ActivateOrDeActivateCharacterController(false);
         viewManager.MoveObjectInWorld(playerController.transform, playerRoofPosition);
-        IsplayerOntheRoof = true;
+        playerController.ActivateOrDeActivateCharacterController(true);
+        Debug.Log($"Teleportation to playerRoofPosition, {playerRoofPosition.position} ! IsplayerOntheRoof is {IsplayerOntheRoof}");
     }
     private void GoToHomeLocation()
     {
+        //IsplayerOntheRoof = false;
+        playerController.ActivateOrDeActivateCharacterController(false);
         viewManager.MoveObjectInWorld(playerController.transform, playerHomePosition);
-        IsplayerOntheRoof = false;
+        playerController.ActivateOrDeActivateCharacterController(true);
+        Debug.Log($"Teleportation to playerHomePosition, {playerHomePosition.position} ! IsplayerOntheRoof is {IsplayerOntheRoof}");
     }
 
     private void ActivateLadder()

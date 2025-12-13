@@ -291,4 +291,15 @@ public class FirstPersonController : MonoBehaviour
             return meshRenderer.bounds.center;
         }
     }
+
+    public void ActivateOrDeActivateCharacterController(bool myBool)
+    {
+        if (!myBool)
+        {
+            characterController.enabled = false;
+            return;
+        }
+
+        characterController.enabled = true;
+    }
 }
