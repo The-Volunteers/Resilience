@@ -6,16 +6,112 @@
 				<SoundcasterSession Name="SS_Tests" ID="{95B60B88-CA5B-4686-92F3-077D9022A9A5}">
 					<ModuleList>
 						<Module>
-							<ObjectRef Name="Play_Test_Beep_Loop" ID="{6584C12E-4801-46B8-A72B-2CB052C29715}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<ObjectRef Name="Play_Amb_Indoor" ID="{9A30AE7C-2230-4C86-ACE6-97C24746AA87}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
 							<Position X="0" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Play_Test_Beep_Short" ID="{B0A6E704-C3AC-4DB8-97E8-161C866DFBFC}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<ObjectRef Name="Play_Door_Close" ID="{3232528D-52AD-46B5-B79A-38864C12CC77}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Walk" ID="{1ECF50C1-3454-4682-B722-ADC5D35EA77F}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Walk" ID="{16B7DE50-E0CE-4903-8779-9D1E1268C345}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="3"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Fridge" ID="{C908F1D1-09FB-406A-9681-A0F7B89879DF}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Waterdrops" ID="{5111AAB4-949B-4006-993B-66C6AE82D1CB}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_EndCredits" ID="{2DC74057-57AD-48BF-B27F-BE350AD817A2}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_Sea" ID="{3E25EE52-4EE5-46C3-9676-BE2F9D4C38A7}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="0" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Amb_Outdoor" ID="{F1E0BBF9-609D-4ED3-81E1-A1BE1968598D}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="Stop_Test_Beep_Loop" ID="{96F65004-FE32-4AC2-B93B-1C9DD2C928EC}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<ObjectRef Name="Play_Door_Closet_Close" ID="{4DC54BD6-5046-4FA8-8A90-2A0437C431C4}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Grab" ID="{426DD476-82A1-4EA2-AE84-47E1D60138FC}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Fridge" ID="{4568FCCD-1AA4-40C2-9E77-22F652E4F17F}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Waterdrops" ID="{0F6E7335-928B-439F-AAC7-B5F6638565A6}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="5"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_Ingame" ID="{628B66A8-ACD5-4E50-BE6C-2C208D88A4E4}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="1" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Cardboard" ID="{3D339193-1936-47C0-9B5A-8A0E8A825744}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
 							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Door_Closet_Open" ID="{43289E29-B2CD-4B8E-8F3F-8F29C846242D}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_LightSwitch" ID="{81C8E7A3-99BC-4E86-97FF-777EF7F7E0B2}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="2" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Sink" ID="{36F716EF-3982-4EE7-9BDD-940E879A8595}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="2" Y="4"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_Intro" ID="{926CAF9F-31DD-4183-9B63-5CDEBDB2DC65}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="2" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Clock" ID="{736EAAE5-C009-475F-BFA6-568A0E517CF9}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Door_Open" ID="{2502BACD-8ED8-454D-A22B-587DFCDB69EB}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="3" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Sink" ID="{731114D4-8EE8-416A-82FB-5A5CE094ED31}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="3" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Play_Music_Menu" ID="{A2B81D60-857A-4B16-8B2C-B3426500522F}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="3" Y="6"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Music_Menu" ID="{404B28A3-82F3-4BC3-ACF0-D7A904371302}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="3" Y="7"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Clock" ID="{BCF53D2A-99EB-4314-8272-7CD7E9D02022}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="4" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Amb_Outdoor" ID="{1C6F91FD-F329-4200-86E8-922A1CCC2289}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="4" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Stop_Amb_Indoor" ID="{E39981CA-EA34-4862-B469-6E42B297B8C5}" WorkUnitID="{0313B82D-BFF4-4C8F-AFE4-5511D60F8B48}"/>
+							<Position X="4" Y="3"/>
 						</Module>
 					</ModuleList>
 				</SoundcasterSession>

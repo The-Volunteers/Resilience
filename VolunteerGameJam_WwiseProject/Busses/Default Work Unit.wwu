@@ -9,6 +9,79 @@
 							<ObjectRef Name="System" ID="{E94B7044-B0A4-41D0-9959-1BF95FF112D8}" WorkUnitID="{BAA5A285-D7C2-438C-8814-5917841146DA}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="M_Amb" ID="{3D2B2465-D1EC-4135-B37C-BA5E440BC6CC}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="4"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="M_Env" ID="{D090214B-59DB-4914-91FB-97AA7DAF17EE}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="8"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<Bus Name="M_Player" ID="{2D4A323D-A8F5-44D0-AA53-3BD434BA2D89}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="1"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+						<AuxBus Name="REV_Indoor" ID="{70AE2C05-CA6D-4099-A55B-202B6ED7C3B2}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<EffectSlot Name="" ID="{259EB1D2-8454-449B-BAAF-0450E1B0BC77}" ShortID="698626636">
+										<ReferenceList>
+											<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+												<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+											</Reference>
+										</ReferenceList>
+									</EffectSlot>
+								</ObjectList>
+							</ObjectLists>
+						</AuxBus>
+						<AuxBus Name="REV_Outdoor" ID="{D1D4FF70-217E-4123-9F31-76C93B8A15EF}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="13"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</AuxBus>
+						<Bus Name="M_Music" ID="{3EFDDA2A-E794-419E-8A7C-ADE69B6C2DA4}">
+							<PropertyList>
+								<Property Name="Color" Type="int16" Value="11"/>
+								<Property Name="OverrideColor" Type="bool" Value="True"/>
+							</PropertyList>
+						</Bus>
+					</ChildrenList>
+					<ObjectLists>
+						<ObjectList Name="Effects">
+							<EffectSlot Name="" ID="{CA6CC033-D78F-4139-92C4-AEF04A45876B}" ShortID="886138611">
+								<ReferenceList>
+									<Reference Name="Effect">
+										<Custom>
+											<Effect Name="Gain (Custom)" ID="{5115278A-5C4E-4C45-93E9-9202BE88D5E6}" ShortID="91621077" PluginName="Wwise Gain" CompanyID="0" PluginID="139" PluginType="3">
+												<PropertyList>
+													<Property Name="FullBandGain" Type="Real32" Value="1.5"/>
+												</PropertyList>
+											</Effect>
+										</Custom>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+							<EffectSlot Name="" ID="{AF22EB22-0EA2-420A-B0FD-EDB9F7B9EC21}" ShortID="669590470">
+								<ReferenceList>
+									<Reference Name="Effect" PluginName="Wwise Peak Limiter" CompanyID="0" PluginID="110" PluginType="3">
+										<ObjectRef Name="Brick_Wall_Minus_1dB_Peak_Fast_Release" ID="{2144284E-7ADD-4341-86A4-4E468BEC9A2D}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+									</Reference>
+								</ReferenceList>
+							</EffectSlot>
+						</ObjectList>
+					</ObjectLists>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>
