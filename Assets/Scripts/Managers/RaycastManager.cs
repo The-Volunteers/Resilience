@@ -67,7 +67,8 @@ public class RaycastManager : MonoBehaviour
         }
         else
         {
-            return new Vector3(0f,-100f, 0f);
+            //return new Vector3(0f,-100f, 0f);
+            return Vector3.zero;
         }
     }
 }

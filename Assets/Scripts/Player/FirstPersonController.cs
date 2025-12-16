@@ -22,12 +22,15 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float interactionCooldown = 2f;
     private Transform objectHeld;
     private Vector3 objectHeldCenter = Vector3.zero;
+    private Transform clue;
+    private Item interactiveItem;
     private bool interactionTimerStart = true;
 
     [Header("References")]
     [SerializeField] private CharacterController characterController;
     [SerializeField] private Camera mainCamera;
     [SerializeField] private PlayerInputHandler playerInputHandler;
+    [SerializeField] private ClueDetector clueDetector;
     //[SerializeField] private RaycastManager raycastManager;
     //[SerializeField] private ObjectPlacer objectPlacer;
 
@@ -85,6 +88,11 @@ public class FirstPersonController : MonoBehaviour
         {
             ApplyHorizontalRotationToHeldObject(mouseXRotation);
             ApplyVerticalRotationToHeldObject(mouseYRotation);
+            if (clue != null)
+            {
+                clueDetector.DetectAClue(clue);
+            }
+
         }
         else
         {
@@ -107,6 +115,8 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleInteraction()
     {
+        CheckInteractableObjects();
+
         InteractionTimerManager();
 
         if (interactionCooldown > 0f)
@@ -118,21 +128,19 @@ public class FirstPersonController : MonoBehaviour
         {
             if (IsObservingAnItem)
             {
-                GameManager.Instance.StopObservingItem.Invoke(objectHeld);
-                GameManager.Instance.IsGamePaused = false;
-                interactionCooldown = 2f;
-                interactionTimerStart = true;
+                EquipeItem();
                 return;
             }
 
             if (objectHeld != null)
             {
-                // object is equipped
-                GameManager.Instance.DropItem.Invoke(objectHeld);
-                interactionCooldown = 2f;
-                interactionTimerStart = true;
-                objectHeld = null;
-                objectHeldCenter = Vector3.zero;
+                Transform depositBoxtransform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+                if(depositBoxtransform != null && depositBoxtransform.CompareTag("DepositBox"))
+                {
+                    CheckIfDepositBox(depositBoxtransform, objectHeld);
+                    return;
+                }
+                DropItem();
                 return;
             }
 
@@ -140,22 +148,101 @@ public class FirstPersonController : MonoBehaviour
             if (transform == null) { return; }
             if (transform.TryGetComponent<Interactable>(out Interactable interactable))
             {
-                // objectHeld and objectHeldCenter must be reset when the object is dropped
-                objectHeld = transform;
-                interactable.Interact();
-                objectHeldCenter = GetCenterOfTheObjectHeld(objectHeld);
-                interactionCooldown = 2f;
-                interactionTimerStart = true;
-                Debug.Log("Interacting with an object");
+                interactable.Interact();               
             }
             else
             {
                 Debug.Log($"{transform.gameObject.name} is not interactable");
             }
 
+            if (transform.TryGetComponent<Item>(out Item item))
+            {
+                CheckIfItsAnItem(transform, item);
+            }
+            else
+            {
+                Debug.Log($"{transform.gameObject.name} is not an object");
+            }
+
         }
     }
 
+    private void CheckInteractableObjects()
+    {
+        if(isObservingAnItem) { return; }
+        Transform transform = RaycastManager.Instance.RayCastFormTheCenterOfTheScreen(interactionDistance, interactableLayer);
+        if (transform == null) { return; }
+        if (transform.CompareTag("Entity")) { return; }
+        //Item item = transform.GetComponent<Item>();
+        //if (item == null) { return; }
+        if(GameManager.Instance.littleShake == null) { return; }
+        //if (item.IsShakeEffectIsPlaying) {  return; }
+        if (GameManager.Instance.ItemEffectisPlaying) {  return; }
+        if(transform.TryGetComponent<Item>(out Item item))
+        {
+            if(item.CheckIfIsObjectToFind())
+            {
+                DoShakeEffect(transform);
+            }
+        }
+        if (transform.CompareTag("DepositBox")) 
+        {
+            DoShakeEffect(transform);
+        }
+    }
+
+    private void DoShakeEffect(Transform transform)
+    {
+        GameManager.Instance.littleShake(transform, 0.1f, 1f, 10, 90, true); //item.IsShakeEffectIsPlaying
+    }
+
+    private void CheckIfDepositBox(Transform binTransform, Transform objectHeld)
+    {
+        if (binTransform.TryGetComponent<DepositBox>(out DepositBox bin))
+        {
+            bin.itemTransform = objectHeld;
+            bin.Interact();
+        }
+    }
+
+    private void EquipeItem()
+    {
+        GameManager.Instance.StopObservingItem.Invoke(objectHeld);
+        GameManager.Instance.IsGamePaused = false;
+        interactionCooldown = 1f;
+        interactionTimerStart = true;
+        if (!interactiveItem.HasTheClueBeenfound) { return; }
+        interactiveItem.CanBeObserved = false;
+    }
+
+    private void DropItem()
+    {
+        // object is dropped
+        GameManager.Instance.DropItem.Invoke(objectHeld);       
+    }
+
+    public void ResetInteractedObjectsValues()
+    {
+        interactionCooldown = 1f;
+        interactionTimerStart = true;
+        objectHeld = null;
+        clue = null;
+        interactiveItem = null;
+        objectHeldCenter = Vector3.zero;
+    }
+
+    private void CheckIfItsAnItem(Transform transform, Item item)
+    {
+        if(GameManager.Instance.ObjectIndexToFind != item.IndexOrder) { return; }
+        // objectHeld, objectHeldCenter and clue must be reset when the object is dropped
+        objectHeld = transform;
+        objectHeldCenter = GetCenterOfTheObjectHeld(objectHeld);
+        interactionCooldown = 1f;
+        interactionTimerStart = true;
+        clue = clueDetector.GetTheClueTransform(objectHeld, item);
+        interactiveItem = item;
+        Debug.Log("Interacting with an object");     
+    }
     private void ApplyHorizontalRotation(float rotationAmount)
     {
         transform.Rotate(0f, rotationAmount, 0f);
@@ -168,13 +255,13 @@ public class FirstPersonController : MonoBehaviour
 
     private void ApplyHorizontalRotationToHeldObject(float rotationAmount)
     {
-        //objectHeld.RotateAround(objectHeld.position, Vector3.up, rotationAmount);
-        objectHeld.RotateAround(objectHeldCenter, Vector3.up, rotationAmount);
+        Vector3 CameraUp = Camera.main.transform.up;
+        objectHeld.RotateAround(objectHeldCenter, CameraUp, rotationAmount);
     }
     private void ApplyVerticalRotationToHeldObject(float rotationAmount)
     {
-        //objectHeld.RotateAround(objectHeld.position, Vector3.left, rotationAmount);
-        objectHeld.RotateAround(objectHeldCenter, Vector3.left, rotationAmount);
+        Vector3 CameraRight = Camera.main.transform.right;
+        objectHeld.RotateAround(objectHeldCenter, CameraRight, rotationAmount);
     }
 
     private void InteractionTimerManager()
@@ -203,5 +290,16 @@ public class FirstPersonController : MonoBehaviour
             Debug.LogWarning($"{transform.gameObject.name} doesn't have a renderer so a new one has been added but might not be at the right mesh render or might be empty !");
             return meshRenderer.bounds.center;
         }
+    }
+
+    public void ActivateOrDeActivateCharacterController(bool myBool)
+    {
+        if (!myBool)
+        {
+            characterController.enabled = false;
+            return;
+        }
+
+        characterController.enabled = true;
     }
 }

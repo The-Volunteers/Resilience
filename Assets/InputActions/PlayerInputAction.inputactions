@@ -113,7 +113,7 @@
                     "name": "",
                     "id": "10d5c81f-4307-4e8c-a687-916cbcfb6411",
                     "path": "<Mouse>/leftButton",
-                    "interactions": "",
+                    "interactions": "Press(pressPoint=1)",
                     "processors": "",
                     "groups": "",
                     "action": "Interaction",
