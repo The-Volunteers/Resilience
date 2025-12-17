@@ -10,6 +10,24 @@
 						<Property Name="Min" Type="Real64" Value="-30"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="GP_Volume_Master" ID="{B6CB8AD4-85B0-494D-AB1E-804A84EBBED7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.75"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="GP_Volume_SFX" ID="{754BA195-8CA6-406E-A195-4CDD68C8472C}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.75"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="GP_Volume_Mus" ID="{00C08B39-CB8E-408C-839B-D41B51513790}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0.75"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>
