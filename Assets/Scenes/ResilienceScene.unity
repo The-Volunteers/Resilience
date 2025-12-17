@@ -6746,6 +6746,8 @@ GameObject:
   - component: {fileID: 666929609}
   - component: {fileID: 666929610}
   - component: {fileID: 666929611}
+  - component: {fileID: 666929613}
+  - component: {fileID: 666929612}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6856,6 +6858,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d5d8b0001f771b43be766aa125f47f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &666929612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666929606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46c5005c94c97514ba5a477cbc320d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDefaultListener: 1
+  bOverrideScalingFactor: 0
+  scalingFactor: -1
+  listenerId: 0
+--- !u!114 &666929613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666929606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5122e846c60b58a46a48347655807c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &700305986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10291,6 +10333,8 @@ GameObject:
   - component: {fileID: 1009442867}
   - component: {fileID: 1009442868}
   - component: {fileID: 1009442869}
+  - component: {fileID: 1009442870}
+  - component: {fileID: 1009442871}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -10428,6 +10472,125 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a435f5e6059fb544b922b83fd8a4fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1009442870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009442863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b455a0c2f46710f4cac0864251b4a5da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayInGameMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 6f0062c1bd438ef478e5602ae6ae9daa,
+      type: 2}
+  StopInGameMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 32be7fabe50bae74e8888619592c4613,
+      type: 2}
+  PlaySeaMusic:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c7a27276701ef4342b818675c4daa921,
+      type: 2}
+  PlayOpenDoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 4efd77f01a076534daaadfce0935dc4a,
+      type: 2}
+  PlayCloseDoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8a2f8150adcac1f4ab67dfb3c8290808,
+      type: 2}
+  PlayEntity:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 69a9e3c315811a348af5f40d8e587375,
+      type: 2}
+  PlayGrab:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8bfd552d91950ac4e89b402f7c9c6f2a,
+      type: 2}
+  PlayWalk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 729cfa44065b5684a932e7ba56cc1a2a,
+      type: 2}
+  StopWalk:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 76002729445ad2c4882f2542a1e7ce1c,
+      type: 2}
+  PlayCarboard:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: e4712ba6bb5fd7d4ca97ea14461dc894,
+      type: 2}
+  PlayTrash:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: f8cabfd8211a31d4f81a15466fc387cc,
+      type: 2}
+  PlayAmbIndoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7857f9b147b768a499ee9985add8be4e,
+      type: 2}
+  StopAmbIndoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 2fc7d62cc67261547bcbb9eadf1ecbf0,
+      type: 2}
+  PlayAmbOutdoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c2b974918e2f11b4ba33e6f1088cb6b2,
+      type: 2}
+  StopAmbOutdoor:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 422f849e23c669b48a91c8473caae6f6,
+      type: 2}
+  volume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 3e1046e50a54a884ab30c881ba1dc0d6,
+      type: 2}
+  volumeLevel: 12
+--- !u!114 &1009442871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009442863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b35b394a142c214998cf5217ede2242, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 732425eab934c984c81b5ed4142f34a2,
+      type: 2}
+  decodeBank: 0
+  overrideLoadSetting: 0
+  loadAsynchronous: 0
+  saveDecodedBank: 0
+  unloadTriggerList: 958ca0ea
+  bankNameInternal: 
+  valueGuidInternal: 
 --- !u!1001 &1027573235
 PrefabInstance:
   m_ObjectHideFlags: 0
