@@ -10366,12 +10366,7 @@
 			<DefaultConversion Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" />
 			<PhysicalFolderList>
 				<PhysicalFolder Path="Attenuations">
-					<WorkUnit Name="Attenuations" ID="{017BDDA0-1BB1-4CE1-8077-79594EC4585C}" PersistMode="Standalone">
-						<PropertyList>
-							<Property Name="Color" Type="int16" Value="10" />
-							<Property Name="OverrideColor" Type="bool" Value="True" />
-						</PropertyList>
-					</WorkUnit>
+					<WorkUnit Name="Attenuations" ID="{017BDDA0-1BB1-4CE1-8077-79594EC4585C}" PersistMode="Standalone" />
 				</PhysicalFolder>
 				<PhysicalFolder Path="Busses">
 					<WorkUnit Name="Busses" ID="{2388DAEA-9775-46C6-A2ED-C5222A397756}" PersistMode="Standalone" />

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{37575DA8-6AD6-9831-4FD7-FB4CC622585B}",
+    "Hash": "{32F33CF0-027F-8270-A880-A392D534C5BE}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -135,6 +135,24 @@
     ],
     "GameParameters": [
      {
+      "Id": "3094669474",
+      "Name": "GP_Volume_Master",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_Volume_Master",
+      "GUID": "{B6CB8AD4-85B0-494D-AB1E-804A84EBBED7}"
+     },
+     {
+      "Id": "3605259557",
+      "Name": "GP_Volume_SFX",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_Volume_SFX",
+      "GUID": "{754BA195-8CA6-406E-A195-4CDD68C8472C}"
+     },
+     {
+      "Id": "3621051413",
+      "Name": "GP_Volume_Mus",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_Volume_Mus",
+      "GUID": "{00C08B39-CB8E-408C-839B-D41B51513790}"
+     },
+     {
       "Id": "3993436217",
       "Name": "GP_SC_Mus",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\GP_SC_Mus",
@@ -143,6 +161,6 @@
     ]
    }
   ],
-  "FileHash": "{7CA62182-3B4C-B759-2AB9-A8A9B84A9343}"
+  "FileHash": "{1CAA6A9F-DB00-2461-E96F-36425FB831CF}"
  }
 }
