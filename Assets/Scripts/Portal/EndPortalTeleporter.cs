@@ -10,6 +10,7 @@ public class EndPortalTeleporter : MonoBehaviour
         if (other.tag == "Player")
         {
             GameManager.Instance.EndGame.Invoke();
+            GameManager.Instance.EndPanelMusic.Invoke();
         }
     }
 }

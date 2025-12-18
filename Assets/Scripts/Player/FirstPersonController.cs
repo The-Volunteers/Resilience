@@ -34,8 +34,15 @@ public class FirstPersonController : MonoBehaviour
     //[SerializeField] private RaycastManager raycastManager;
     //[SerializeField] private ObjectPlacer objectPlacer;
 
+    [Header("Footstep Settings")]
+    //[SerializeField] private float footstepInterval = 0.5f;
+    //[SerializeField] private float sprintFootstepInterval = 0.3f;
+    [SerializeField] private float minimumVelocityForFootsteps = 0.1f;
+
     private Vector3 currentMovement;
     private float verticalRotation;
+    private float footstepTimer;
+    private bool isPlayingFootsteps = false;
 
     private bool isObservingAnItem;
     public bool IsObservingAnItem
@@ -59,7 +66,9 @@ public class FirstPersonController : MonoBehaviour
     {
         HandleMovement();
         HandleRotation();
-        HandleInteraction();      
+        HandleInteraction();
+        HandleFootstepsLoop();
+        //HandleFootsteps();
     }
 
     private Vector3 CalculateWolrdDirection()
@@ -167,6 +176,85 @@ public class FirstPersonController : MonoBehaviour
         }
     }
 
+    //private void HandleFootsteps()
+    //{
+    //    // Vérifie si le joueur se déplace (sans la gravité)
+    //    Vector3 horizontalVelocity = new Vector3(currentMovement.x, 0f, currentMovement.z);
+    //    bool isMoving = horizontalVelocity.magnitude > minimumVelocityForFootsteps;
+
+
+    //    bool isGrounded = characterController.isGrounded;
+
+    //    if (isMoving && isGrounded)
+    //    {
+
+    //        footstepTimer -= Time.deltaTime;
+
+
+    //        if (footstepTimer <= 0f)
+    //        {
+    //            GameManager.Instance.PlayerWalkSound.Invoke();
+
+    //            // Réinitialise le timer selon la vitesse
+    //            float interval = playerInputHandler.SprintTriggered ? sprintFootstepInterval : footstepInterval;
+    //            footstepTimer = interval;
+    //        }
+
+    //        isPlayingFootsteps = true;
+    //    }
+    //    else
+    //    {
+    //        // Arrête les sons si le joueur s'arrête
+    //        if (isPlayingFootsteps)
+    //        {
+    //            GameManager.Instance.StopPlayerWalkSound.Invoke();
+    //            isPlayingFootsteps = false;
+    //        }
+
+    //        footstepTimer = 0f;
+    //    }
+    //}
+
+
+    private void HandleFootstepsLoop()
+    {
+        Vector3 horizontalVelocity = new Vector3(currentMovement.x, 0f, currentMovement.z);
+        bool isMoving = horizontalVelocity.magnitude > minimumVelocityForFootsteps;
+        bool isGrounded = characterController.isGrounded;
+
+        if (isMoving && isGrounded)
+        {
+            if (!isPlayingFootsteps)
+            {
+                // Démarrer la boucle de pas
+                if (GameManager.Instance.PlayerWalkSound != null)
+                {
+                    GameManager.Instance.PlayerWalkSound.Invoke();
+                }
+                isPlayingFootsteps = true;
+            }
+
+            // Optionnel : Ajuster la vitesse du son selon la vitesse de déplacement
+            //if (walkSpeedRTPC != null)
+            //{
+            //    float normalizedSpeed = horizontalVelocity.magnitude / sprintSpeed;
+            //    walkSpeedRTPC.SetValue(gameObject, normalizedSpeed * 100f);
+            //}
+        }
+        else
+        {
+            if (isPlayingFootsteps)
+            {
+                // Arrêter la boucle
+                if (GameManager.Instance.StopPlayerWalkSound != null)
+                {
+                    GameManager.Instance.StopPlayerWalkSound.Invoke();
+                }
+                isPlayingFootsteps = false;
+            }
+        }
+    }
+
     private void CheckInteractableObjects()
     {
         if(isObservingAnItem) { return; }
@@ -211,6 +299,7 @@ public class FirstPersonController : MonoBehaviour
         GameManager.Instance.IsGamePaused = false;
         interactionCooldown = 1f;
         interactionTimerStart = true;
+        //GameManager.Instance.GrabingItem.Invoke();
         if (!interactiveItem.HasTheClueBeenfound) { return; }
         interactiveItem.CanBeObserved = false;
     }
@@ -241,6 +330,7 @@ public class FirstPersonController : MonoBehaviour
         interactionTimerStart = true;
         clue = clueDetector.GetTheClueTransform(objectHeld, item);
         interactiveItem = item;
+        GameManager.Instance.GrabingItem.Invoke();
         Debug.Log("Interacting with an object");     
     }
     private void ApplyHorizontalRotation(float rotationAmount)

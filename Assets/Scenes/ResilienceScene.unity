@@ -6825,6 +6825,7 @@ MonoBehaviour:
   mainCamera: {fileID: 330585545}
   playerInputHandler: {fileID: 251608795}
   clueDetector: {fileID: 666929611}
+  minimumVelocityForFootsteps: 0.1
 --- !u!114 &666929610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10355,6 +10356,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   viewManager: {fileID: 1009442866}
+  soundManager: {fileID: 1009442870}
   playerController: {fileID: 666929609}
   objectPlacer: {fileID: 666929610}
   playerItemObserverPosition: {fileID: 1990927826}
@@ -10395,6 +10397,24 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   EndGame:
+    m_PersistentCalls:
+      m_Calls: []
+  PlayerWalkSound:
+    m_PersistentCalls:
+      m_Calls: []
+  StopPlayerWalkSound:
+    m_PersistentCalls:
+      m_Calls: []
+  OpeningDoorSound:
+    m_PersistentCalls:
+      m_Calls: []
+  ClosingDoorSound:
+    m_PersistentCalls:
+      m_Calls: []
+  GrabingItem:
+    m_PersistentCalls:
+      m_Calls: []
+  EndPanelMusic:
     m_PersistentCalls:
       m_Calls: []
 --- !u!4 &1009442865
@@ -10499,6 +10519,11 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: c7a27276701ef4342b818675c4daa921,
       type: 2}
+  PlayEndCredits:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 038576b9931c0484e94049326209ab49,
+      type: 2}
   PlayOpenDoor:
     idInternal: 0
     valueGuidInternal: 
@@ -10559,12 +10584,24 @@ MonoBehaviour:
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 422f849e23c669b48a91c8473caae6f6,
       type: 2}
-  volume:
+  GlobalVolume:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 3e1046e50a54a884ab30c881ba1dc0d6,
+    WwiseObjectReference: {fileID: 11400000, guid: 82d75f20f87991242a1087d58b9ea834,
       type: 2}
-  volumeLevel: 12
+  MusicVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: ac2592cbaa09c4a43a429cced72c3a74,
+      type: 2}
+  SfxVolume:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b0fa449a950508d4a9ed4ccc7b63b1c3,
+      type: 2}
+  GlobalVolumeLevel: 0.75
+  MusicVolumeLevel: 0.1
+  SfxVolumeLevel: 0.3
 --- !u!114 &1009442871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11007,6 +11044,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2119622080}
+    - targetCorrespondingSourceObject: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119622085}
+    - targetCorrespondingSourceObject: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2119622084}
   m_SourcePrefab: {fileID: 100100000, guid: da34de2783083a34a8e6dadca18926aa, type: 3}
 --- !u!4 &1040608259 stripped
 Transform:
@@ -13745,6 +13790,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1679670167}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63ae657e41674ed4083e6cb0b2206211,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679670172}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 63ae657e41674ed4083e6cb0b2206211,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1679670171}
   m_SourcePrefab: {fileID: 100100000, guid: 63ae657e41674ed4083e6cb0b2206211, type: 3}
 --- !u!1001 &1232038067
 PrefabInstance:
@@ -18152,6 +18205,57 @@ MonoBehaviour:
   - Will you keep It or throw It away ?
   - The choice is yours... Keep It or may It be forevver forgotten
   - ... Is It important ?
+--- !u!54 &1679670171
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679670164}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1679670172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679670164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5122e846c60b58a46a48347655807c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1 &1688251583
 GameObject:
   m_ObjectHideFlags: 0
@@ -31865,6 +31969,57 @@ MonoBehaviour:
   openAngle: 90
   closeAngle: 0
   animationDuration: 0.5
+--- !u!54 &2119622084
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119622072}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &2119622085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2119622072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5122e846c60b58a46a48347655807c2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_listeners:
+    initialListenerList: []
+    useDefaultListeners: 1
+  isEnvironmentAware: 1
+  isStaticObject: 0
+  usePositionOffsetData: 0
+  m_positionOffsetData:
+    KeepMe: 0
+    positionOffset: {x: 0, y: 0, z: 0}
+  scalingFactor: 1
+  m_posOffsetData: {fileID: 0}
+  listenerMask: 1
 --- !u!1001 &2122570635
 PrefabInstance:
   m_ObjectHideFlags: 0

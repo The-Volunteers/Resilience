@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
+    [SerializeField] private SoundManager soundManager;
 
     [Header("Player References")]
     [SerializeField] private FirstPersonController playerController;
@@ -64,6 +65,12 @@ public class GameManager : MonoBehaviour
     public UnityEvent FoundClueEffect;
     public UnityEvent OpenExitDoor;
     public UnityEvent EndGame;
+    public UnityEvent PlayerWalkSound;
+    public UnityEvent StopPlayerWalkSound;
+    public UnityEvent<GameObject> OpeningDoorSound;
+    public UnityEvent<GameObject> ClosingDoorSound;
+    public UnityEvent GrabingItem;
+    public UnityEvent EndPanelMusic;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
     public ShakeEffect littleShake;
@@ -95,6 +102,12 @@ public class GameManager : MonoBehaviour
         IsplayerOntheRoof = false;       
         OpenExitDoor.AddListener(viewManager.DisplayEndPortal);
         EndGame.AddListener(viewManager.GoTpEndPanel);
+        PlayerWalkSound.AddListener(soundManager.PlayingFootstepSound);
+        StopPlayerWalkSound.AddListener(soundManager.StopingFootstepSound);
+        OpeningDoorSound.AddListener(soundManager.PlayingOpenDoorSound);
+        ClosingDoorSound.AddListener(soundManager.PlayingCloseDoorSound);
+        GrabingItem.AddListener(soundManager.PlayingGrabSound);
+        EndPanelMusic.AddListener(soundManager.PlayingEndCreditsMusic);
     }
 
     // Update is called once per frame
@@ -154,6 +167,7 @@ public class GameManager : MonoBehaviour
             {
                 entity.AdvanceStoryEntity();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+                soundManager.PlayingEntitySound(entity.gameObject);
                 ObjectIndexToFind++;
             }
         }
@@ -164,6 +178,7 @@ public class GameManager : MonoBehaviour
     private void DestroyItem(Transform transform)
     {
         Destroy(transform.gameObject);
+        soundManager.PlayingCardboardSound();
         objectPlacer.IsInPlacementMode = false;
         Destroy(objectPlacer.PreviewObject);
         playerController.ResetInteractedObjectsValues();
@@ -175,6 +190,7 @@ public class GameManager : MonoBehaviour
                 entity.AdvanceStoryEntity();
                 ActivateLadder();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+                soundManager.PlayingEntitySound(entity.gameObject);
                 ObjectIndexToFind++;
             }
         }
@@ -187,6 +203,7 @@ public class GameManager : MonoBehaviour
         entity.AdvanceStoryEntity();
         ActivateLadder();
         viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
+        soundManager.PlayingEntitySound(entity.gameObject);
         ObjectIndexToFind++;
     }
 
@@ -196,6 +213,9 @@ public class GameManager : MonoBehaviour
         playerController.ActivateOrDeActivateCharacterController(false);
         viewManager.MoveObjectInWorld(playerController.transform, playerRoofPosition);
         playerController.ActivateOrDeActivateCharacterController(true);
+        soundManager.StopingInGameMusic();
+        soundManager.PlayingOutDoorMusic();
+        soundManager.PlayingSeaMusic();
         Debug.Log($"Teleportation to playerRoofPosition, {playerRoofPosition.position} ! IsplayerOntheRoof is {IsplayerOntheRoof}");
     }
     private void GoToHomeLocation()
@@ -204,6 +224,8 @@ public class GameManager : MonoBehaviour
         playerController.ActivateOrDeActivateCharacterController(false);
         viewManager.MoveObjectInWorld(playerController.transform, playerHomePosition);
         playerController.ActivateOrDeActivateCharacterController(true);
+        soundManager.StopingOutDoorMusic();
+        soundManager.PlayingInGameMusic();
         Debug.Log($"Teleportation to playerHomePosition, {playerHomePosition.position} ! IsplayerOntheRoof is {IsplayerOntheRoof}");
     }
 

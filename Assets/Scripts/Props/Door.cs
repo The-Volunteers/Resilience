@@ -33,8 +33,13 @@ public class Door : MonoBehaviour, Interactable
         if(targetAngle > 0f)
         {
             collider.isTrigger = true;
+            GameManager.Instance.OpeningDoorSound.Invoke(gameObject);
         }
-        currentCoroutine = StartCoroutine(OpenOrCloseDoor(targetAngle));
+        else
+        {
+            GameManager.Instance.ClosingDoorSound.Invoke(gameObject);
+        }
+            currentCoroutine = StartCoroutine(OpenOrCloseDoor(targetAngle));
         isDoorOpened = !isDoorOpened;
         if (!isDoorOpened)
         {

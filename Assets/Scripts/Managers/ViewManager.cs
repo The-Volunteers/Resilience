@@ -48,6 +48,7 @@ public class ViewManager : MonoBehaviour
     public void GoTpEndPanel()
     {
         UIManager.ActivateEndPanel();
+
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
     }
