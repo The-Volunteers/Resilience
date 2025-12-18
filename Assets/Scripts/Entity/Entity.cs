@@ -49,6 +49,7 @@ public class Entity : MonoBehaviour, Interactable
         if(actualEntityStoryLocation.index >= 4)
         {
             GameManager.Instance.OpenExitDoor.Invoke();
+            GameManager.Instance.CleaningAllObjects.Invoke();
         }
     }
 

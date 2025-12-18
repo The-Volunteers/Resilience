@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 5a445201f87b29f46aa10239de5ecd36, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.28301734, g: 0.18711448, b: 0.33971524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -294,6 +294,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -456,6 +461,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: livre1 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -554,6 +564,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Assiette (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -765,6 +780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livre1 (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1098,6 +1118,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1176,6 +1201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livre1 (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1364,6 +1394,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaise (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07040659470c5e84a98eb61fb00639d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1946,6 +1981,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verre01 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2173,16 +2213,31 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: abd82b0bc6c3fb84e99ef43ae49c13b6, type: 2}
+    - target: {fileID: -4102896567227365644, guid: 3b7aaae712d737044a888a304ae78d23,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.788
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 3b7aaae712d737044a888a304ae78d23,
         type: 3}
       propertyPath: m_Name
       value: oreiller
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3b7aaae712d737044a888a304ae78d23,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     - target: {fileID: 4246966911199921380, guid: 3b7aaae712d737044a888a304ae78d23,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: abd82b0bc6c3fb84e99ef43ae49c13b6, type: 2}
+    - target: {fileID: 6926348206565403143, guid: 3b7aaae712d737044a888a304ae78d23,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2326,6 +2381,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verre01 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2404,6 +2464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fourchette (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 594888d870c8d2d468b32633d08c04bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2717,6 +2782,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2892,6 +2962,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Verre01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3180,6 +3255,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaise (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07040659470c5e84a98eb61fb00639d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4054,7 +4134,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4154,6 +4234,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Assiette (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4278,7 +4363,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4457,6 +4542,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Assiette (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4763,6 +4853,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Assiette (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5536,6 +5631,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5623,7 +5723,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5724,6 +5824,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: piece02
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 0ab04098a93db9c459d494b078ef7f2a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6412,6 +6517,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: couteau
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a72ca5aeaacbad4f9fa7663d48be8ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6543,6 +6653,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: couteau (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a72ca5aeaacbad4f9fa7663d48be8ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6721,6 +6836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Assiette (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6967,6 +7087,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fourchette (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 594888d870c8d2d468b32633d08c04bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7066,6 +7191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7164,6 +7294,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Verre01 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7471,6 +7606,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: couteau (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a72ca5aeaacbad4f9fa7663d48be8ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7695,7 +7835,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7822,7 +7962,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8023,6 +8163,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livre1 (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -8611,6 +8756,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fourchette (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 594888d870c8d2d468b32633d08c04bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8769,6 +8919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Envelope (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 420cf3e866a0b4c4b8f6dcd92c2acde9,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8867,6 +9022,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: poele (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a25f37ec4fd870b4bba200cf40045b80,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -9453,6 +9613,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verre01 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9908,7 +10073,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -10309,6 +10474,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Verre01 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10417,6 +10587,9 @@ MonoBehaviour:
   EndPanelMusic:
     m_PersistentCalls:
       m_Calls: []
+  CleaningAllObjects:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1009442865
 Transform:
   m_ObjectHideFlags: 0
@@ -10448,6 +10621,8 @@ MonoBehaviour:
   portal: {fileID: 10601532}
   portalColider: {fileID: 365778617}
   endPortal: {fileID: 1005945863}
+  house: {fileID: 612482669}
+  ObjectsToClean: []
 --- !u!114 &1009442867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10716,6 +10891,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10904,6 +11084,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaise
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07040659470c5e84a98eb61fb00639d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11419,6 +11604,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fourchette (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 594888d870c8d2d468b32633d08c04bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11742,6 +11932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: couteau (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5a72ca5aeaacbad4f9fa7663d48be8ac,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12423,7 +12618,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13090,6 +13285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13168,6 +13368,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SelPoivreBouteille
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 44cbba086451c2940ba7ad88f09faa9d,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13378,6 +13583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13518,7 +13728,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13875,7 +14085,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14212,7 +14422,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15096,7 +15306,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15234,7 +15444,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: fe39515720b7c0e48acca73de9070229,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.3379993
+      value: 4.748
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: fe39515720b7c0e48acca73de9070229,
         type: 3}
@@ -15468,6 +15678,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: "cuill\xE8re"
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34ab82079a21ac543a58f512777dc0d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15625,6 +15840,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livre1 (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15988,6 +16208,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: livre1 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16075,7 +16300,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16727,7 +16952,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -16807,6 +17032,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Envelope
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 420cf3e866a0b4c4b8f6dcd92c2acde9,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17013,6 +17243,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17091,6 +17326,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: livre1 (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17431,7 +17671,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -17709,6 +17949,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chaise (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07040659470c5e84a98eb61fb00639d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18021,6 +18266,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: casserolle01
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a3671e499a5302f4594bdcdb48c3fc9a,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18099,6 +18349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Fourchette (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 594888d870c8d2d468b32633d08c04bc,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18407,7 +18662,7 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -18730,7 +18985,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19137,7 +19392,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 70ffef883af707b4c914cba54dec3482,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.3479996
+      value: 4.748
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 70ffef883af707b4c914cba54dec3482,
         type: 3}
@@ -19555,7 +19810,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -19783,7 +20038,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22090,6 +22345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chaise (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 07040659470c5e84a98eb61fb00639d4,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22428,6 +22688,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Verre01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 435ee96c19ebee94e976695cab66dfad,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29678,6 +29943,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: livre1 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e88a8c6c4915704489f50be23d0eca1b,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -29915,6 +30185,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: poele
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a25f37ec4fd870b4bba200cf40045b80,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30014,6 +30289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30086,6 +30366,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Envelope (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 420cf3e866a0b4c4b8f6dcd92c2acde9,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31255,6 +31540,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: casserolle
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 360f4dae7c7509b488300ff0feaabae8,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31354,6 +31644,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Assiette (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c37bd0e307189a042836332f713dfefe,
+        type: 3}
+      propertyPath: m_TagString
+      value: ObjectToClean
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31441,7 +31736,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 00bd61ed9bcd57841aa4d08b7104300e,
         type: 3}
       propertyPath: m_TagString
-      value: DepositBox
+      value: ObjectToClean
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

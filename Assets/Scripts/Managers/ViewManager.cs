@@ -9,11 +9,14 @@ public class ViewManager : MonoBehaviour
     [SerializeField] private GameObject portal;
     [SerializeField] private GameObject portalColider;
     [SerializeField] private GameObject endPortal;
+    [SerializeField] private Transform house;
+    [SerializeField] private List<GameObject> ObjectsToClean;
     // Start is called before the first frame update
     void Start()
     {
         //GameManager.Instance.DisplayDialogue.AddListener(UIManager.ShowMessage);
         GameManager.Instance.NpcInteraction.AddListener(UIManager.ShowMessage);
+        initializeListOfObjectsToClean();
     }
 
     // Update is called once per frame
@@ -37,6 +40,28 @@ public class ViewManager : MonoBehaviour
     {
         ItemToMove.position = placementLocation.position;
         ItemToMove.localRotation = placementLocation.localRotation;
+    }
+
+    private void initializeListOfObjectsToClean()
+    {
+        foreach(Transform child in house)
+        {
+            if(child.tag == "ObjectToClean")
+            {
+                ObjectsToClean.Add(child.gameObject);
+            }
+        }
+    } 
+
+    public void CleaningHouse()
+    {
+        if (GameManager.Instance.IsHouseClean) return;
+        if(ObjectsToClean.Count <= 0) return;
+        for (int i = 0; i < ObjectsToClean.Count; i++)
+        {
+            ObjectsToClean[i].gameObject.SetActive(false);
+        }
+        GameManager.Instance.IsHouseClean = true;
     }
 
     public void DisplayEndPortal()

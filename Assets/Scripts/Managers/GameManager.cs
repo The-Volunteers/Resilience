@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     public int ObjectIndexToFind {  get; private set; } = 0;
     public bool IsplayerOntheRoof { get; private set; }
     public bool HasTriedToGetOut { get; set; } = false;
+    public bool IsHouseClean { get; set; } = false;
 
     [Header("Manager References")]
     [SerializeField] private ViewManager viewManager;
@@ -71,6 +72,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent<GameObject> ClosingDoorSound;
     public UnityEvent GrabingItem;
     public UnityEvent EndPanelMusic;
+    public UnityEvent CleaningAllObjects;
 
     public delegate void ShakeEffect(Transform transform, float strenght, float duration, int vibrato, float randomness, bool fadeOut); //bool isEffectPlaying
     public ShakeEffect littleShake;
@@ -108,6 +110,7 @@ public class GameManager : MonoBehaviour
         ClosingDoorSound.AddListener(soundManager.PlayingCloseDoorSound);
         GrabingItem.AddListener(soundManager.PlayingGrabSound);
         EndPanelMusic.AddListener(soundManager.PlayingEndCreditsMusic);
+        CleaningAllObjects.AddListener(viewManager.CleaningHouse);
     }
 
     // Update is called once per frame
