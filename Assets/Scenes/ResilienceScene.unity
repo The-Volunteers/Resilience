@@ -2613,8 +2613,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 90bf32c924dd4384b830781eef5d3d21,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 272156905}
   m_SourcePrefab: {fileID: 100100000, guid: 90bf32c924dd4384b830781eef5d3d21, type: 3}
+--- !u!1 &272156904 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 90bf32c924dd4384b830781eef5d3d21,
+    type: 3}
+  m_PrefabInstance: {fileID: 272156903}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &272156905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272156904}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4904653dd8120f543b7e80bb8cd1584e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  boundsExpansion: 5
 --- !u!1001 &297802591
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5401,7 +5424,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 1
+  m_RenderPostProcessing: 0
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
@@ -11208,6 +11231,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7664422482286799217, guid: da34de2783083a34a8e6dadca18926aa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
