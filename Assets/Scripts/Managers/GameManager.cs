@@ -169,6 +169,7 @@ public class GameManager : MonoBehaviour
             if (item.HasTheClueBeenfound)
             {
                 entity.AdvanceStoryEntity();
+                ActivateLadder();
                 viewManager.MoveObjectInWorld(entity.transform, entity.actualEntityStoryLocation.entityLocation);
                 soundManager.PlayingEntitySound(entity.gameObject);
                 ObjectIndexToFind++;
